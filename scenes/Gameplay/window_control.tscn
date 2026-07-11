@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://b6n8bi8fb4qnq"]
+
+[ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="1_hqavr"]
+[ext_resource type="Texture2D" uid="uid://daput5j66exgu" path="res://assets/godot_engine_logo/logo_vertical_color_dark.png" id="2_3mb25"]
+[ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="2_4mfx8"]
+[ext_resource type="Script" uid="uid://d3rdoi287i0qf" path="res://scripts/SizableBorderControl.gd" id="3_hqavr"]
+
+[node name="WindowControl" type="Node" unique_id=923110562]
+script = ExtResource("1_hqavr")
+min_size = Vector2(250, 300)
+
+[node name="Panel" type="Panel" parent="." unique_id=1589288933]
+custom_minimum_size = Vector2(100, 60)
+offset_left = 239.0
+offset_top = 145.0
+offset_right = 639.0
+offset_bottom = 495.0
+
+[node name="Content" type="Control" parent="Panel" unique_id=649920884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/Content" unique_id=1241321082]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Text Here"
+
+[node name="Button" type="Button" parent="Panel/Content" unique_id=200787245]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -37.0
+offset_right = 69.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "placeholder"
+
+[node name="CloseButton" type="TextureButton" parent="Panel/Content" unique_id=1331929035]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 1.0
+offset_right = 389.0
+offset_bottom = 26.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Content" unique_id=1574593717]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -27.98292
+offset_bottom = 32.0
+grow_horizontal = 0
+texture = ExtResource("2_3mb25")
+expand_mode = 3
+
+[node name="MovableBorderControl" type="Control" parent="Panel" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 35.0
+grow_horizontal = 2
+mouse_filter = 1
+script = ExtResource("2_4mfx8")
+move_target = NodePath("..")
+metadata/_custom_type_script = "uid://dlrox1ajgxk51"
+
+[node name="RightBorderControl" type="Control" parent="Panel" unique_id=218379795 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 15
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="BottomBorderControl" type="Control" parent="Panel" unique_id=1378604854 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 14
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 1
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="BRBorderControl" type="Control" parent="Panel" unique_id=1145596416 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 12
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 2
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="LeftBorderControl" type="Control" parent="Panel" unique_id=1854564692 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 5.0
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 10
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+invert_x = true
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="TopBorderControl" type="Control" parent="Panel" unique_id=306536193 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 14
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 1
+invert_y = true
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="BLBorderControl" type="Control" parent="Panel" unique_id=150202629 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = 10.0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 11
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 2
+invert_x = true
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="TLBorderControl" type="Control" parent="Panel" unique_id=791385554 node_paths=PackedStringArray("size_change_target")]
+anchors_preset = 0
+offset_right = 10.0
+offset_bottom = 10.0
+mouse_filter = 1
+mouse_default_cursor_shape = 12
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 2
+invert_x = true
+invert_y = true
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="TRBorderControl" type="Control" parent="Panel" unique_id=1380136350 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 11
+script = ExtResource("3_hqavr")
+size_change_target = NodePath("..")
+size_change_type = 2
+invert_y = true
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[connection signal="pressed" from="Panel/Content/CloseButton" to="." method="_on_close_pressed"]
