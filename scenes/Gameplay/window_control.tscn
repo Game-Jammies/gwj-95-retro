@@ -7,12 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://3hoxfomdq5hq" path="res://resources/dev art/test_header2.png" id="5_fjhh3"]
 [ext_resource type="Texture2D" uid="uid://drp1squ88s8l5" path="res://resources/dev art/test_content.png" id="6_k3yb1"]
 
-[node name="WindowControl" type="Node" unique_id=923110562]
+[node name="WindowControl" type="Control" unique_id=436124811]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_hqavr")
 
 [node name="Window" type="Control" parent="." unique_id=156546500]
 custom_minimum_size = Vector2(200, 260)
-layout_mode = 3
 anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 350.0
@@ -114,7 +115,6 @@ text = "Text here"
 text_overrun_behavior = 3
 
 [node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
-visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
