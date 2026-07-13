@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://wi26su36bm4d"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_ytnqj"]
+
+[resource]
+script = ExtResource("1_ytnqj")
+title = "Guinny's Adventure"
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"
