@@ -1,7 +1,6 @@
 extends Node
 class_name WindowControl
 
-@export var min_size: Vector2 #the minimum size the window is allowed to have
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

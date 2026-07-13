@@ -17,14 +17,14 @@ var is_hover: bool
 var is_grab: bool
 var mouse_down_pos: Vector2 
 
-var parent
-var min_size: Vector2
+#var parent
+#var min_size: Vector2
 
 func _ready() -> void:
 	mouse_entered.connect(func(): is_hover = true)
 	mouse_exited.connect(func(): is_hover = false)
-	parent = get_parent().get_parent() as WindowControl
-	min_size = parent.min_size
+	#parent = get_parent().get_parent() as WindowControl
+	#min_size = parent.min_size
 	
 func _process(delta: float) -> void:
 	if is_hover && Input.is_action_just_pressed("Left Mouse Button"):
@@ -42,32 +42,28 @@ func _process(delta: float) -> void:
 			SizeChange.Horizontal:
 				if invert_x:
 					size_change_target.size.x -= offset.x
-					if size_change_target.size.x > min_size.x: size_change_target.position.x += offset.x
+					size_change_target.position.x += offset.x
 				else:
 					size_change_target.size.x += offset.x
 			SizeChange.Vertical:
 				if invert_y:
 					size_change_target.size.y -= offset.y
-					if size_change_target.size.y > min_size.y: size_change_target.position.y += offset.y
+					size_change_target.position.y += offset.y
 				else:
 					size_change_target.size.y += offset.y
 			SizeChange.Both:
 				if invert_x:
 					size_change_target.size.x -= offset.x
-					if size_change_target.size.x > min_size.x: size_change_target.position.x += offset.x
+					size_change_target.position.x += offset.x
 				else:
 					size_change_target.size.x += offset.x
 				if invert_y:
 					size_change_target.size.y -= offset.y
-					if size_change_target.size.y > min_size.y: size_change_target.position.y += offset.y
+					size_change_target.position.y += offset.y
 				else:
 					size_change_target.size.y += offset.y
 			_: #case default
 				size_change_target.size += offset
 			#end match
-		#force set minimum size
-		if size_change_target.size.x < min_size.x:
-			size_change_target.size.x = min_size.x
-		if size_change_target.size.y < min_size.y:
-			size_change_target.size.y = min_size.y
+		
 		mouse_down_pos = current_mouse_pos
