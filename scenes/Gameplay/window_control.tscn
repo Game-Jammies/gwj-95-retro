@@ -27,9 +27,9 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_k3yb1")
-patch_margin_left = 9
+patch_margin_left = 12
 patch_margin_top = 7
-patch_margin_right = 9
+patch_margin_right = 12
 patch_margin_bottom = 9
 
 [node name="ContentTexture" type="NinePatchRect" parent="Window" unique_id=283158314]
@@ -41,10 +41,10 @@ offset_top = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_e4khl")
-patch_margin_left = 24
+patch_margin_left = 25
 patch_margin_top = 15
 patch_margin_right = 25
-patch_margin_bottom = 36
+patch_margin_bottom = 37
 
 [node name="WholeWindow" type="NinePatchRect" parent="Window" unique_id=289451618]
 visible = false
@@ -73,55 +73,80 @@ offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Window/Content" unique_id=200787245]
+[node name="TopBarBounds" type="Control" parent="Window/Content" unique_id=1508529856]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" type="TextureButton" parent="Window/Content/TopBarBounds" unique_id=1763250408]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_right = 15.0
+offset_bottom = 48.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_e4khl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content/TopBarBounds" unique_id=592232348]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 237.0
+offset_bottom = 33.0
+
+[node name="Label" type="Label" parent="Window/Content/TopBarBounds/VBoxContainer" unique_id=59455975]
+layout_mode = 2
+text = "Text here"
+text_overrun_behavior = 3
+
+[node name="LowerBounds" type="Control" parent="Window/Content" unique_id=331838409]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 47.0
+offset_right = -16.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Window/Content/LowerBounds" unique_id=1084320785]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 12.0
+offset_right = 399.0
+offset_bottom = 35.0
+text = "Sample Text Sample Text Sample Text Bluju"
+
+[node name="Button" type="Button" parent="Window/Content/LowerBounds" unique_id=200787245]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -37.0
-offset_right = 69.0
-offset_bottom = 36.5
+offset_left = -69.5
+offset_top = -46.0
+offset_right = 68.5
+offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "placeholder"
 
-[node name="Label2" type="Label" parent="Window/Content" unique_id=1084320785]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 13.0
-offset_top = 60.0
-offset_right = 408.0
-offset_bottom = 83.0
-text = "Sample Text Sample Text Sample Text Bluju"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content" unique_id=592232348]
-layout_mode = 0
-offset_right = 239.0
-offset_bottom = 33.0
-
-[node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
-layout_mode = 2
-text = "Text here"
-text_overrun_behavior = 3
-
-[node name="CloseButton" type="TextureButton" parent="Window/Content" unique_id=1763250408]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -37.0
-offset_right = 12.0
-offset_bottom = 48.0
-grow_horizontal = 0
-scale = Vector2(0.6, 0.6)
-texture_normal = ExtResource("5_e4khl")
-
 [node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
-visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -181,5 +206,5 @@ size_change_target = NodePath("..")
 size_change_type = 2
 metadata/_custom_type_script = "uid://d3rdoi287i0qf"
 
-[connection signal="pressed" from="Window/Content/Button" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Window/Content/CloseButton" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Window/Content/TopBarBounds/CloseButton" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Window/Content/LowerBounds/Button" to="." method="_on_close_pressed"]
