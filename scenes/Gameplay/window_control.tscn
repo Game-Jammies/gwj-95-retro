@@ -27,10 +27,10 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_k3yb1")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
+patch_margin_left = 9
+patch_margin_top = 7
+patch_margin_right = 9
+patch_margin_bottom = 9
 
 [node name="ContentTexture" type="NinePatchRect" parent="Window" unique_id=283158314]
 layout_mode = 1
@@ -41,10 +41,10 @@ offset_top = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_e4khl")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
+patch_margin_left = 24
+patch_margin_top = 15
+patch_margin_right = 25
+patch_margin_bottom = 36
 
 [node name="WholeWindow" type="NinePatchRect" parent="Window" unique_id=289451618]
 visible = false
