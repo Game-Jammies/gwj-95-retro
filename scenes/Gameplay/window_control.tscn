@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b6n8bi8fb4qnq"]
 
 [ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="1_hqavr"]
-[ext_resource type="Texture2D" uid="uid://daput5j66exgu" path="res://assets/godot_engine_logo/logo_vertical_color_dark.png" id="2_3mb25"]
 [ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="2_4mfx8"]
+[ext_resource type="Texture2D" uid="uid://bf0p6g31mxs3l" path="res://assets/art/window top edit.png" id="2_k3yb1"]
+[ext_resource type="Texture2D" uid="uid://bh8afucxxhg0x" path="res://assets/art/window content edit.png" id="3_e4khl"]
 [ext_resource type="Script" uid="uid://d3rdoi287i0qf" path="res://scripts/SizableBorderControl.gd" id="3_hqavr"]
-[ext_resource type="Texture2D" uid="uid://3hoxfomdq5hq" path="res://resources/dev art/test_header2.png" id="5_fjhh3"]
-[ext_resource type="Texture2D" uid="uid://drp1squ88s8l5" path="res://resources/dev art/test_content.png" id="6_k3yb1"]
+[ext_resource type="Texture2D" uid="uid://x6wbyul1feie" path="res://assets/art/window_edit.png" id="4_k3yb1"]
+[ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="5_e4khl"]
 
 [node name="WindowControl" type="Control" unique_id=436124811]
 layout_mode = 3
@@ -25,7 +26,7 @@ anchor_right = 1.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_fjhh3")
+texture = ExtResource("2_k3yb1")
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
@@ -39,11 +40,25 @@ anchor_bottom = 1.0
 offset_top = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_k3yb1")
+texture = ExtResource("3_e4khl")
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
+
+[node name="WholeWindow" type="NinePatchRect" parent="Window" unique_id=289451618]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_k3yb1")
+patch_margin_left = 30
+patch_margin_top = 80
+patch_margin_right = 30
+patch_margin_bottom = 80
 
 [node name="Content" type="Control" parent="Window" unique_id=649920884]
 clip_contents = true
@@ -73,34 +88,13 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "placeholder"
 
-[node name="Close Button" type="TextureButton" parent="Window/Content" unique_id=2047429376]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -30.0
-offset_bottom = 30.0
-grow_horizontal = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect" type="TextureRect" parent="Window/Content" unique_id=1574593717]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -27.98292
-offset_bottom = 32.0
-grow_horizontal = 0
-texture = ExtResource("2_3mb25")
-expand_mode = 3
-
 [node name="Label2" type="Label" parent="Window/Content" unique_id=1084320785]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 5.0
+offset_left = 13.0
 offset_top = 60.0
-offset_right = 400.0
+offset_right = 408.0
 offset_bottom = 83.0
 text = "Sample Text Sample Text Sample Text Bluju"
 
@@ -114,7 +108,20 @@ layout_mode = 2
 text = "Text here"
 text_overrun_behavior = 3
 
+[node name="CloseButton" type="TextureButton" parent="Window/Content" unique_id=1763250408]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -37.0
+offset_right = 12.0
+offset_bottom = 48.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_e4khl")
+
 [node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -175,4 +182,4 @@ size_change_type = 2
 metadata/_custom_type_script = "uid://d3rdoi287i0qf"
 
 [connection signal="pressed" from="Window/Content/Button" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Window/Content/Close Button" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Window/Content/CloseButton" to="." method="_on_close_pressed"]

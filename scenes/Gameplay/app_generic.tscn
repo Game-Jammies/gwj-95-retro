@@ -24,4 +24,12 @@ offset_bottom = 1171.0
 scale = Vector2(0.1, 0.1)
 texture_normal = SubResource("CompressedTexture2D_iahq6")
 
+[node name="Label" type="Label" parent="." unique_id=360714197]
+layout_mode = 0
+offset_top = 111.0
+offset_right = 99.0
+offset_bottom = 134.0
+text = "Text"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="TextureButton" to="." method="spawn_object"]
