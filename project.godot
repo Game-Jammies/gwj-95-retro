@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Game Template"
+config/name="RETROBUSTER"
 run/main_scene="res://scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
@@ -37,6 +37,7 @@ folder_colors={
 "res://resources/GameCatalogue/": "red",
 "res://resources/GameData/": "red",
 "res://scenes/Computer/": "red",
+"res://scenes/Gameplay/": "yellow",
 "res://scenes/VideoGame/": "red"
 }
 
