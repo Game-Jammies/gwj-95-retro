@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Game Template"
+config/name="RETROBUSTER"
 run/main_scene="res://scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
@@ -24,8 +24,9 @@ ProjectUISoundController="*res://addons/maaacks_game_template/base/nodes/autoloa
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 
 [editor_plugins]
 
@@ -34,7 +35,10 @@ enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://resources/GameCatalogue/": "red",
+"res://resources/GameData/": "red",
 "res://scenes/Computer/": "red",
+"res://scenes/Gameplay/": "yellow",
 "res://scenes/VideoGame/": "red"
 }
 
