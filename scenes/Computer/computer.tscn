@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bdcpj65y68ok7"]
 
+[ext_resource type="Texture2D" uid="uid://bfat87osjjexk" path="res://assets/art/Desktop Blank.png" id="1_4xq8f"]
 [ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/app_generic.tscn" id="1_hkthn"]
+[ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
 
 [node name="Computer" type="Control" unique_id=74978615]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lea2j")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1046354256]
 layout_mode = 1
@@ -17,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_4xq8f")
 
 [node name="ScreenMarginContainer" type="MarginContainer" parent="." unique_id=852935357]
 layout_mode = 1
