@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://btktjg8rjay85"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_ypukv"]
+
+[resource]
+script = ExtResource("1_ypukv")
+title = "Alien Shooter"
+description = "A very popular and infuential game in the the industry. The goal is to defeat wave after wave of descending aliens, making sure to destroy them before they reach the bottom . All you have is a horizontally controlled laser cannon to kill all the aliens and earn as many points as possible."
+genre = Array[int]([3])
+developer = 3
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

@@ -8,4 +8,5 @@ script = ExtResource("1_qr4s0")
 title = "METRO DROID"
 description = "Bounty Hunter Sam Arin descends below the planet Tebes,their Metro transportation system, to infiltrate the labyrinthine Space Pirate base and hunt down the deadly, life-sucking species known as Droids to destroy the biochemical organism known as Brain Father."
 box_art = ExtResource("1_y6clb")
+genre = Array[int]([1, 3])
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://usai2ek5oetg"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_4bgeh"]
+
+[resource]
+script = ExtResource("1_4bgeh")
+title = "Boom"
+description = "In the future, an unnamed space marine fights for survival on a space station on Mars where the Unified Space Incorporation accidentally opened up a physical portal to hell."
+maturity_rating = 2
+genre = Array[int]([3])
+developer = 2
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"
