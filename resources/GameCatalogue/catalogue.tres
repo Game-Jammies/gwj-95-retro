@@ -5,8 +5,22 @@
 [ext_resource type="Script" uid="uid://dau65w0vtjttt" path="res://resources/GameCatalogue/game_catalogue.gd" id="2_hs0uh"]
 [ext_resource type="Resource" uid="uid://cmd0hedbfysjr" path="res://resources/GameData/mansionvania.tres" id="3_6msil"]
 [ext_resource type="Resource" uid="uid://cofisj7qedrwl" path="res://resources/GameData/metro_droid.tres" id="4_t2nof"]
+[ext_resource type="Resource" uid="uid://diofqk0tn83sv" path="res://resources/GameData/micro_man.tres" id="5_qhde2"]
+[ext_resource type="Resource" uid="uid://c1ohlnqhqegc5" path="res://resources/GameData/jonic_the_porcupine.tres" id="6_ax2cr"]
+[ext_resource type="Resource" uid="uid://rosnv8ik4aek" path="res://resources/GameData/secret_of_baboon_island.tres" id="7_wqujc"]
+[ext_resource type="Resource" uid="uid://msewtioiunje" path="res://resources/GameData/the_elfboy_of_legend.tres" id="8_5qxnb"]
+[ext_resource type="Resource" uid="uid://dwh81filpxc6v" path="res://resources/GameData/grave_robber.tres" id="9_3heta"]
+[ext_resource type="Resource" uid="uid://cbwjui874jjvi" path="res://resources/GameData/super_guinny_54.tres" id="10_y0gxb"]
+[ext_resource type="Resource" uid="uid://chcblwl6a044c" path="res://resources/GameData/jonic_drifting.tres" id="11_4ld22"]
+[ext_resource type="Resource" uid="uid://cealsk20g8ieu" path="res://resources/GameData/grand_tourism.tres" id="12_u7rv6"]
+[ext_resource type="Resource" uid="uid://b2qjtxsj43om8" path="res://resources/GameData/crush_group_racing.tres" id="13_pfvjc"]
+[ext_resource type="Resource" uid="uid://brpr34pp4ekd1" path="res://resources/GameData/super_guinny_kart.tres" id="14_8rl2a"]
+[ext_resource type="Resource" uid="uid://usai2ek5oetg" path="res://resources/GameData/boom.tres" id="15_g02sk"]
+[ext_resource type="Resource" uid="uid://btktjg8rjay85" path="res://resources/GameData/alien_shooter.tres" id="16_8nibc"]
+[ext_resource type="Resource" uid="uid://bbjlnv06kl0de" path="res://resources/GameData/silvereye_008.tres" id="17_tdgtf"]
+[ext_resource type="Resource" uid="uid://c050qkdftn6lm" path="res://resources/GameData/bob_bombem.tres" id="18_c8jg2"]
 
 [resource]
 script = ExtResource("2_hs0uh")
-games = Array[ExtResource("1_mv2on")]([ExtResource("2_87mhp"), ExtResource("3_6msil"), ExtResource("4_t2nof")])
+games = Array[ExtResource("1_mv2on")]([ExtResource("2_87mhp"), ExtResource("3_6msil"), ExtResource("4_t2nof"), ExtResource("5_qhde2"), ExtResource("6_ax2cr"), ExtResource("7_wqujc"), ExtResource("8_5qxnb"), ExtResource("9_3heta"), ExtResource("10_y0gxb"), ExtResource("11_4ld22"), ExtResource("12_u7rv6"), ExtResource("13_pfvjc"), ExtResource("14_8rl2a"), ExtResource("15_g02sk"), ExtResource("16_8nibc"), ExtResource("17_tdgtf"), ExtResource("18_c8jg2")])
 metadata/_custom_type_script = "uid://dau65w0vtjttt"
