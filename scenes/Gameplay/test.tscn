@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://cwthctpos18by"]
-
-[ext_resource type="PackedScene" uid="uid://djfqowhio0vof" path="res://scenes/Gameplay/window_generic.tscn" id="1_ors2h"]
-
-[node name="Test" type="Node2D" unique_id=1163947646]
-
-[node name="WindowGeneric" parent="." unique_id=1118360137 instance=ExtResource("1_ors2h")]
-position = Vector2(652, 231)

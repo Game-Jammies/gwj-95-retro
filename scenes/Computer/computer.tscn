@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bdcpj65y68ok7"]
 
 [ext_resource type="Texture2D" uid="uid://bfat87osjjexk" path="res://assets/art/Desktop Blank.png" id="1_4xq8f"]
-[ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/app_generic.tscn" id="1_hkthn"]
+[ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_email.tscn" id="1_hkthn"]
 [ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
+[ext_resource type="PackedScene" uid="uid://c7cjqnjico36q" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_settings.tscn" id="4_vyhg6"]
 
 [node name="Computer" type="Control" unique_id=74978615]
 layout_mode = 3
@@ -36,16 +37,12 @@ theme_override_constants/margin_bottom = 24
 
 [node name="HFlowContainer" type="HFlowContainer" parent="ScreenMarginContainer" unique_id=473577498]
 layout_mode = 2
-theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 12
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
 
-[node name="Button" type="Button" parent="ScreenMarginContainer/HFlowContainer" unique_id=1257640525]
+[node name="EmailApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=1342616751 instance=ExtResource("1_hkthn")]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-text = "app 1"
 
-[node name="Button2" type="Button" parent="ScreenMarginContainer/HFlowContainer" unique_id=1977161005]
-layout_mode = 2
-text = "app 2"
-
-[node name="AppGeneric" parent="ScreenMarginContainer/HFlowContainer" unique_id=1342616751 instance=ExtResource("1_hkthn")]
+[node name="SettingsApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=177136333 instance=ExtResource("4_vyhg6")]
 layout_mode = 2

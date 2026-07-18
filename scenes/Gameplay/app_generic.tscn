@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dovx768w1l608"]
+[gd_scene format=3 uid="uid://djqb8puk4vbro"]
 
-[ext_resource type="Script" uid="uid://dboqitdbrln3n" path="res://scripts/app.gd" id="1_7dv23"]
+[ext_resource type="Script" uid="uid://dboqitdbrln3n" path="res://scripts/shortcut.gd" id="1_7dv23"]
 [ext_resource type="PackedScene" uid="uid://b6n8bi8fb4qnq" path="res://scenes/Gameplay/window_control.tscn" id="2_qx6vd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iahq6"]
