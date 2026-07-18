@@ -39,8 +39,8 @@ folder_colors={
 "res://resources/GameCatalogue/": "red",
 "res://resources/GameData/": "red",
 "res://scenes/Computer/": "red",
+"res://scenes/GameCard/": "red",
 "res://scenes/Gameplay/": "yellow",
-"res://scenes/VideoGame/": "red",
 "res://text/": "blue"
 }
 

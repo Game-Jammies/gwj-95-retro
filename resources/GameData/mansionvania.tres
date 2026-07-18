@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_1se10")
 title = "Mansionvania"
+description = "In 1691, Simone Trelmont , descendant of a legendary vampire hunter, enters the ridiculously huge mansion of CEO Dracula to destroy him with the inherited \"Vampire Slayer\" whip when CEO Dracula suddenly reappears hundred years after Simone's ancestor vanquished him. "
 box_art = ExtResource("1_mtivr")
 system = 1
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

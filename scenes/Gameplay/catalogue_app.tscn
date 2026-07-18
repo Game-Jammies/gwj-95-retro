@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dptgu8ctrc2uk"]
 
-[ext_resource type="PackedScene" uid="uid://chgsyctccshsw" path="res://scenes/VideoGame/video_game.tscn" id="1_geeqo"]
+[ext_resource type="Script" uid="uid://bshttvfs34bk5" path="res://scenes/Gameplay/catalogue_app.gd" id="1_56jao"]
 [ext_resource type="Texture2D" uid="uid://b6psbq7xfadn5" path="res://assets/art/BoxArt/Kirby.png" id="2_hccu0"]
 [ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="2_qt3m0"]
 
@@ -10,9 +10,9 @@
 HSplitContainer/styles/split_bar_background = SubResource("StyleBoxEmpty_ionpo")
 
 [node name="CatalogueApp" type="Node2D" unique_id=130923106]
+script = ExtResource("1_56jao")
 
 [node name="CataloguePanel" type="Panel" parent="." unique_id=1335884375]
-visible = false
 offset_left = 648.0
 offset_right = 800.0
 offset_bottom = 800.0
@@ -64,19 +64,15 @@ custom_minimum_size = Vector2(400, 0)
 clip_contents = false
 layout_mode = 2
 
-[node name="HFlowContainer" type="HFlowContainer" parent="CataloguePanel/HSplitContainer/MarginContainer/ScrollContainer" unique_id=597871606]
-custom_minimum_size = Vector2(500, 500)
+[node name="GameContainer" type="HFlowContainer" parent="CataloguePanel/HSplitContainer/MarginContainer/ScrollContainer" unique_id=597871606]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 500)
 layout_mode = 2
 theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 250
 
-[node name="VideoGame" parent="CataloguePanel/HSplitContainer/MarginContainer/ScrollContainer/HFlowContainer" unique_id=1830034026 instance=ExtResource("1_geeqo")]
-layout_mode = 2
-
-[node name="VideoGame2" parent="CataloguePanel/HSplitContainer/MarginContainer/ScrollContainer/HFlowContainer" unique_id=1594648685 instance=ExtResource("1_geeqo")]
-layout_mode = 2
-
 [node name="GamePanel" type="Panel" parent="." unique_id=2096641309]
+visible = false
 offset_right = 600.0
 offset_bottom = 800.0
 
