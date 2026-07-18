@@ -135,8 +135,10 @@ offset_right = -5.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="LowerBounds" type="Control" parent="Window/Content" unique_id=331838409]
+unique_name_in_owner = true
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15
@@ -197,16 +199,67 @@ grow_horizontal = 0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("6_urrnt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content" unique_id=592232348]
+[node name="VBoxContainer" type="MarginContainer" parent="Window/Content" unique_id=1262753552]
 layout_mode = 1
 offset_left = 8.0
-offset_right = 208.0
+offset_right = 342.0
 offset_bottom = 33.0
 
-[node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
+[node name="TitleLabel" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Emails: Game Requested!"
 text_overrun_behavior = 3
 
+[node name="Feedback" type="Control" parent="Window/Content" unique_id=387972931]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 47.0
+offset_right = -16.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Window/Content/Feedback" unique_id=606019876]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ResponseText" type="Label" parent="Window/Content/Feedback/MarginContainer" unique_id=2037694978]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Sample Text Sample Text Sample Text Bluju"
+autowrap_mode = 3
+
+[node name="ResponseButton" type="Button" parent="Window/Content/Feedback" unique_id=78349262]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -64.0
+offset_right = 42.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Okay"
+
 [connection signal="pressed" from="Window/Content/LowerBounds/SubmitButton" to="." method="_on_submit_button_clicked"]
 [connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]
+[connection signal="pressed" from="Window/Content/Feedback/ResponseButton" to="." method="_on_response_button_pressed"]

@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 folder_colors={
 "res://resources/GameCatalogue/": "red",
 "res://resources/GameData/": "red",
+"res://resources/Taskbar/": "orange",
 "res://scenes/Computer/": "red",
 "res://scenes/Gameplay/": "yellow",
 "res://scenes/VideoGame/": "red",

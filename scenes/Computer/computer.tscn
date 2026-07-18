@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_email.tscn" id="1_hkthn"]
 [ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
 [ext_resource type="PackedScene" uid="uid://c7cjqnjico36q" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_settings.tscn" id="4_vyhg6"]
+[ext_resource type="PackedScene" uid="uid://c1hjspwnp3sxb" path="res://scenes/Computer/taskbar.tscn" id="5_2rem3"]
 
 [node name="Computer" type="Control" unique_id=74978615]
 layout_mode = 3
@@ -46,3 +47,7 @@ layout_mode = 2
 
 [node name="SettingsApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=177136333 instance=ExtResource("4_vyhg6")]
 layout_mode = 2
+
+[node name="Taskbar" parent="." unique_id=1460470293 instance=ExtResource("5_2rem3")]
+layout_mode = 1
+anchors_preset = 12

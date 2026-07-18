@@ -5,8 +5,12 @@ var game_desc: Array = []
 var target_game_title: String #the target game
 @onready var dropdown = %OptionButton
 
+const CORRECT_MSG: String = "This is exactly what I wanted! Thank you!"
+const INCORRECT_MSG: String = "No, I don't think this is what I'm looking for."
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	%Feedback.visible = false
 	if file_path == "":
 		print("You didn't set the file path!")
 	else:
@@ -54,11 +58,17 @@ func populate_dropdown():
 func _on_submit_button_clicked():
 	#TODO: emit a signal from the dropdown.get_selected_id()
 	if dropdown.get_selected_id() > 0:
-		dropdown.get_selected_id()
-		print(dropdown.get_selected_id())
-	#or have it check the correct game here (optional)
+		%LowerBounds.visible = false
 		var selected_game = dropdown.get_item_text(dropdown.selected)
 		if selected_game == target_game_title:
-			print("Correct game selected wow")
+			%ResponseText.text = CORRECT_MSG
 		else:
-			print("you suck")
+			%ResponseText.text = INCORRECT_MSG
+		%TitleLabel.text = "Emails: Response from Customer"
+		%Feedback.visible = true
+
+func _on_response_button_pressed():
+	%Feedback.visible = false
+	load_random_game()
+	%TitleLabel.text = "Emails: Game Requested!"
+	%LowerBounds.visible = true
