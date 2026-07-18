@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://chgsyctccshsw"]
 
+[ext_resource type="Texture2D" uid="uid://u7p8qd2yhsie" path="res://assets/art/BoxArt/Metroid.png" id="1_7kyxh"]
+
 [node name="VideoGame" type="Control" unique_id=1830034026]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725707515]
+custom_minimum_size = Vector2(150, 225)
+clip_contents = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1580436339]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/AspectRatioContainer" unique_id=520896480]
+texture = ExtResource("1_7kyxh")
+centered = false
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1723584480]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer" unique_id=447573506]
+layout_mode = 2
+text = "This is where the description of the game would be."
+fit_content = true

@@ -2,7 +2,7 @@ class_name GameData extends Resource
 
 enum MaturityRating { EVERYONE, TEEN, MATURE}
 enum Genre { PLATFORMER, RPG, SHOOTER, PUZZLE, RACING, SPORTS, HORROR}
-enum System { JINTENDO_ENTERTAINMENT_SYSTEM}
+enum System { JINTENDO_ENTERTAINMENT_SYSTEM, JONAMI}
 
 
 @export var title: String = ""
