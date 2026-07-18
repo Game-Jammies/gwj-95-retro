@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://brpr34pp4ekd1"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_4ubsl"]
+
+[resource]
+script = ExtResource("1_4ubsl")
+title = "Super Guinny Kart"
+description = "Super Guinny Kart is a kart racing game that features eight iconic characters from the Super Guinny series competing in fast paced races. Players can race in four cups, take time trials, or battle against each other by using different powers ups available in the game."
+genre = Array[int]([5])
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

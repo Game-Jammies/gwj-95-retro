@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://chgsyctccshsw"]
+
+[ext_resource type="Texture2D" uid="uid://u7p8qd2yhsie" path="res://assets/art/BoxArt/Metroid.png" id="1_k6bol"]
+
+[node name="GameCard" type="Control" unique_id=1830034026]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725707515]
+custom_minimum_size = Vector2(135, 200)
+clip_contents = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1580436339]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BoxArt" type="TextureRect" parent="VBoxContainer/AspectRatioContainer" unique_id=175407382]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_k6bol")
+expand_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1723584480]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TitleLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer" unique_id=447573506]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(135, 60)
+layout_mode = 2
+text = "Game Title "
+scroll_active = false
+autowrap_mode = 2
+horizontal_alignment = 1
