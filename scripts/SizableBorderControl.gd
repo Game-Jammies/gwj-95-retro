@@ -26,7 +26,7 @@ func _ready() -> void:
 	#parent = get_parent().get_parent() as WindowControl
 	#min_size = parent.min_size
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_hover && Input.is_action_just_pressed("Left Mouse Button"):
 		mouse_down_pos = get_viewport().get_mouse_position()
 		is_grab = true

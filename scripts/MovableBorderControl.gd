@@ -12,7 +12,7 @@ func _ready() -> void:
 	mouse_entered.connect(func(): is_hover = true)
 	mouse_exited.connect(func(): is_hover = false)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_hover and Input.is_action_just_pressed("Left Mouse Button"):
 		mouse_down_pos = get_viewport().get_mouse_position()
 		is_grab = true
