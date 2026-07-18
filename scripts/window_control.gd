@@ -1,5 +1,4 @@
 extends Node
-class_name WindowControl
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,4 +13,5 @@ func _on_close_pressed():
 	#destroy itself when closed
 	print("Close button pressed")
 	"""TODO: maybe make some sort of small animation when close? not necessessary"""
-	queue_free()
+	get_parent().remove_child(self)
+	self.queue_free()

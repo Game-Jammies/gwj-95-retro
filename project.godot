@@ -39,7 +39,8 @@ folder_colors={
 "res://resources/GameData/": "red",
 "res://scenes/Computer/": "red",
 "res://scenes/Gameplay/": "yellow",
-"res://scenes/VideoGame/": "red"
+"res://scenes/VideoGame/": "red",
+"res://text/": "blue"
 }
 
 [gui]
