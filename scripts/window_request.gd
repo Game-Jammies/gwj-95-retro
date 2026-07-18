@@ -12,6 +12,7 @@ func _ready() -> void:
 	else:
 		load_file()
 		load_random_game()
+	populate_dropdown()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,7 +41,7 @@ func populate_dropdown():
 	"""TODO: access the gamecatalogue from game_catalogue.gd"""
 	#remove the dummy options when we do the TODO above
 	dropdown.clear()
-	dropdown.add("SELECT GAME", 0)
+	dropdown.add_item("SELECT GAME", 0)
 	"""
 	for game in gamecatalogue:
 		dropdown.add_item(game) (make sure game is a string)
@@ -52,4 +53,12 @@ func populate_dropdown():
 	
 func _on_submit_button_clicked():
 	#TODO: emit a signal from the dropdown.get_selected_id()
-	dropdown.get_selected_id()
+	if dropdown.get_selected_id() > 0:
+		dropdown.get_selected_id()
+		print(dropdown.get_selected_id())
+	#or have it check the correct game here (optional)
+		var selected_game = dropdown.get_item_text(dropdown.selected)
+		if selected_game == target_game_title:
+			print("Correct game selected wow")
+		else:
+			print("you suck")
