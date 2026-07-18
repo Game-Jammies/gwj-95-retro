@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cofisj7qedrwl"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_qr4s0"]
+[ext_resource type="Texture2D" uid="uid://u7p8qd2yhsie" path="res://assets/art/BoxArt/Metroid.png" id="1_y6clb"]
+
+[resource]
+script = ExtResource("1_qr4s0")
+title = "METRO DROID"
+description = "Bounty Hunter Sam Arin descends below the planet Tebes,their Metro transportation system, to infiltrate the labyrinthine Space Pirate base and hunt down the deadly, life-sucking species known as Droids to destroy the biochemical organism known as Brain Father."
+box_art = ExtResource("1_y6clb")
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

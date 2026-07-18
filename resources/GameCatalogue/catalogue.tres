@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_mv2on"]
 [ext_resource type="Resource" uid="uid://wi26su36bm4d" path="res://resources/GameData/guinnys_adventure.tres" id="2_87mhp"]
 [ext_resource type="Script" uid="uid://dau65w0vtjttt" path="res://resources/GameCatalogue/game_catalogue.gd" id="2_hs0uh"]
+[ext_resource type="Resource" uid="uid://cmd0hedbfysjr" path="res://resources/GameData/mansionvania.tres" id="3_6msil"]
+[ext_resource type="Resource" uid="uid://cofisj7qedrwl" path="res://resources/GameData/metro_droid.tres" id="4_t2nof"]
 
 [resource]
 script = ExtResource("2_hs0uh")
-games = Array[ExtResource("1_mv2on")]([ExtResource("2_87mhp")])
+games = Array[ExtResource("1_mv2on")]([ExtResource("2_87mhp"), ExtResource("3_6msil"), ExtResource("4_t2nof")])
 metadata/_custom_type_script = "uid://dau65w0vtjttt"
