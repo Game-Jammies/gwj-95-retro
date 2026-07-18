@@ -63,17 +63,6 @@ patch_margin_top = 80
 patch_margin_right = 30
 patch_margin_bottom = 80
 
-[node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 40.0
-grow_horizontal = 2
-mouse_filter = 2
-script = ExtResource("7_jnhwl")
-move_target = NodePath("..")
-metadata/_custom_type_script = "uid://dlrox1ajgxk51"
-
 [node name="MovableBorderControl2" type="Control" parent="Window" unique_id=2040728043 node_paths=PackedStringArray("move_target")]
 layout_mode = 1
 anchors_preset = 10
