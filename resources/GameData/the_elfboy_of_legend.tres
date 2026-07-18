@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://msewtioiunje"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_g03ae"]
+
+[resource]
+script = ExtResource("1_g03ae")
+title = "The Elfboy of Legend"
+description = "Follow the story of young Elfboy, who must rescue a princess from the evil and demonic King Ganon. The evil King has put a spell on his lair which can only be removed with the threee pieces of the Quadforce, a golden rectangle with mystical powers."
+genre = Array[int]([0, 2])
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

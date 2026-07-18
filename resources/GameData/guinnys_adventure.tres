@@ -8,4 +8,5 @@ script = ExtResource("1_ytnqj")
 title = "Guinny's Adventure"
 description = "After Queen Tetete breaks the Moon Rod, the power source for the Fountain of Veggies, Guinny must travel across Dream Land to gather it's pieces from Tetete's minions. This is the second game in the Guinny franchise, but it is known for being the first game in the series to introduce Guinny's ability to copy abilities."
 box_art = ExtResource("1_aqu8h")
+genre = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"
