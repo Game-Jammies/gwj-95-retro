@@ -3,11 +3,15 @@ extends Node
 @export var file_path : String #eg res://text/file.txt
 var game_desc: Array = []
 var target_game_title: String #the target game
+@onready var dropdown = %OptionButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_file()
-	
+	if file_path == "":
+		print("You didn't set the file path!")
+	else:
+		load_file()
+		load_random_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,6 +26,30 @@ func load_file():
 		file.close()
 		
 		game_desc = content.split("\n")
+		game_desc.erase("") #handle blank lines
 	else:
 		print("File doesn't exist, did you enter the right path?")
 		
+func load_random_game():
+	var target = game_desc.pick_random().split("%")
+	target_game_title = target[0].strip_edges()
+	%ContentText.text = target[1].strip_edges()
+
+func populate_dropdown():
+	"""Populates the OptionButton to include"""
+	"""TODO: access the gamecatalogue from game_catalogue.gd"""
+	#remove the dummy options when we do the TODO above
+	dropdown.clear()
+	dropdown.add("SELECT GAME", 0)
+	"""
+	for game in gamecatalogue:
+		dropdown.add_item(game) (make sure game is a string)
+	"""
+	dropdown.add_item("Mario")
+	dropdown.add_item("Zelda")
+	
+	dropdown.selected = 0
+	
+func _on_submit_button_clicked():
+	#TODO: emit a signal from the dropdown.get_selected_id()
+	dropdown.get_selected_id()

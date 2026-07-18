@@ -99,23 +99,6 @@ offset_top = 2.0
 offset_right = 350.0
 offset_bottom = 226.0
 text = "Sample Text Sample Text Sample Text Bluju"
-autowrap_mode = 2
-
-[node name="SubmitButton" type="Button" parent="Window/Content/LowerBounds" unique_id=1845400338]
-layout_mode = 0
-offset_left = 260.0
-offset_top = 206.0
-offset_right = 344.0
-offset_bottom = 251.0
-text = "Submit"
-
-[node name="OptionButton" type="OptionButton" parent="Window/Content/LowerBounds" unique_id=845408862]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 36.0
-offset_top = 206.0
-offset_right = 128.0
-offset_bottom = 237.0
 
 [node name="CloseButton" type="TextureButton" parent="Window/Content" unique_id=1763250408]
 layout_mode = 1
