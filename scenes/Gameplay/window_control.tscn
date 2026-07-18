@@ -122,7 +122,6 @@ text = "Emails: Game Requested!"
 text_overrun_behavior = 3
 
 [node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
-visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
