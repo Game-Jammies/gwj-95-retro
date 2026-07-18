@@ -63,6 +63,77 @@ patch_margin_top = 80
 patch_margin_right = 30
 patch_margin_bottom = 80
 
+[node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("7_jnhwl")
+move_target = NodePath("..")
+metadata/_custom_type_script = "uid://dlrox1ajgxk51"
+
+[node name="MovableBorderControl2" type="Control" parent="Window" unique_id=2040728043 node_paths=PackedStringArray("move_target")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 1
+script = ExtResource("7_jnhwl")
+move_target = NodePath("..")
+metadata/_custom_type_script = "uid://dlrox1ajgxk51"
+
+[node name="RightBorderControl" type="Control" parent="Window" unique_id=218379795 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 15
+script = ExtResource("8_j53vt")
+size_change_target = NodePath("..")
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="BottomBorderControl" type="Control" parent="Window" unique_id=1378604854 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 14
+script = ExtResource("8_j53vt")
+size_change_target = NodePath("..")
+size_change_type = 1
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
+[node name="BRBorderControl" type="Control" parent="Window" unique_id=1145596416 node_paths=PackedStringArray("size_change_target")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 12
+script = ExtResource("8_j53vt")
+size_change_target = NodePath("..")
+size_change_type = 2
+metadata/_custom_type_script = "uid://d3rdoi287i0qf"
+
 [node name="Content" type="Control" parent="Window" unique_id=649920884]
 clip_contents = true
 layout_mode = 1
@@ -132,74 +203,13 @@ texture_normal = ExtResource("6_urrnt")
 [node name="VBoxContainer" type="VBoxContainer" parent="Window/Content" unique_id=592232348]
 layout_mode = 1
 offset_left = 8.0
-offset_top = 1.0
 offset_right = 247.0
-offset_bottom = 34.0
+offset_bottom = 33.0
 
 [node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
 layout_mode = 2
 text = "Emails: Game Requested!"
 text_overrun_behavior = 3
-
-[node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 40.0
-grow_horizontal = 2
-mouse_filter = 1
-script = ExtResource("7_jnhwl")
-move_target = NodePath("..")
-metadata/_custom_type_script = "uid://dlrox1ajgxk51"
-
-[node name="RightBorderControl" type="Control" parent="Window" unique_id=218379795 node_paths=PackedStringArray("size_change_target")]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.0
-grow_horizontal = 0
-grow_vertical = 2
-mouse_filter = 1
-mouse_default_cursor_shape = 15
-script = ExtResource("8_j53vt")
-size_change_target = NodePath("..")
-metadata/_custom_type_script = "uid://d3rdoi287i0qf"
-
-[node name="BottomBorderControl" type="Control" parent="Window" unique_id=1378604854 node_paths=PackedStringArray("size_change_target")]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -5.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 1
-mouse_default_cursor_shape = 14
-script = ExtResource("8_j53vt")
-size_change_target = NodePath("..")
-size_change_type = 1
-metadata/_custom_type_script = "uid://d3rdoi287i0qf"
-
-[node name="BRBorderControl" type="Control" parent="Window" unique_id=1145596416 node_paths=PackedStringArray("size_change_target")]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -10.0
-grow_horizontal = 0
-grow_vertical = 0
-mouse_filter = 1
-mouse_default_cursor_shape = 12
-script = ExtResource("8_j53vt")
-size_change_target = NodePath("..")
-size_change_type = 2
-metadata/_custom_type_script = "uid://d3rdoi287i0qf"
 
 [connection signal="pressed" from="Window/Content/LowerBounds/SubmitButton" to="." method="_on_submit_button_clicked"]
 [connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]
