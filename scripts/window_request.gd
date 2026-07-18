@@ -1,4 +1,7 @@
 extends Node
+"""Handles the requests for windows"""
+
+const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
 
 @export var file_path : String #eg res://text/file.txt
 var game_desc: Array = []
@@ -46,21 +49,20 @@ func populate_dropdown():
 	#remove the dummy options when we do the TODO above
 	dropdown.clear()
 	dropdown.add_item("SELECT GAME", 0)
-	"""
-	for game in gamecatalogue:
-		dropdown.add_item(game) (make sure game is a string)
-	"""
-	dropdown.add_item("Mario")
-	dropdown.add_item("Zelda")
+
+	for game in CATALOGUE.games:
+		dropdown.add_item(game.title)
 	
 	dropdown.selected = 0
 	
 func _on_submit_button_clicked():
 	#TODO: emit a signal from the dropdown.get_selected_id()
+	print(target_game_title)
 	if dropdown.get_selected_id() > 0:
 		%LowerBounds.visible = false
 		var selected_game = dropdown.get_item_text(dropdown.selected)
-		if selected_game == target_game_title:
+		print(selected_game)
+		if selected_game.to_upper() == target_game_title.to_upper():
 			%ResponseText.text = CORRECT_MSG
 		else:
 			%ResponseText.text = INCORRECT_MSG

@@ -1,4 +1,5 @@
 extends Node
+"""This is for each button that would be on the taskbar, allowing them to set the associated window to visible or not"""
 
 var title: String
 var icon: CompressedTexture2D
