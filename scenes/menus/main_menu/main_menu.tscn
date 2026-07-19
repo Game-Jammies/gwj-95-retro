@@ -41,10 +41,15 @@ layout_mode = 2
 text = "Level Select"
 
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="1" unique_id=1090235228]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 53.0
-offset_top = 824.0
+offset_top = -113.0
 offset_right = 148.0
-offset_bottom = 918.0
+offset_bottom = -19.0
+grow_vertical = 0
 tooltip_text = "Exit Game"
 
 [node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="2" unique_id=301223169]
@@ -62,17 +67,30 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="3" unique_id=468526331]
-offset_left = 180.0
-offset_top = 822.0
-offset_right = 277.0
-offset_bottom = 920.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 181.0
+offset_top = -114.0
+offset_right = 278.0
+offset_bottom = -16.0
+grow_vertical = 0
 tooltip_text = "Options"
 
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="4" unique_id=1937938999]
-offset_left = 1718.0
-offset_top = 442.0
-offset_right = 1794.0
-offset_bottom = 501.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -25.0
+offset_right = -125.0
+offset_bottom = 34.0
+grow_horizontal = 0
+grow_vertical = 2
 tooltip_text = "Start Game"
 
 [node name="VersionMargin" parent="." index="4" unique_id=1732528471]
@@ -87,7 +105,6 @@ offset_left = -210.0
 offset_top = -100.0
 offset_right = 210.0
 offset_bottom = 100.0
-ignore_siblings = false
 title = "New Game"
 text = "Are you sure you want to start a new game?
 
