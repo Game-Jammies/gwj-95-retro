@@ -47,7 +47,9 @@ func _on_genre_filter_pressed(genre_id: int) -> void:
 		game_card.visible = genre_id == -1 or genre_id in game_card.game_data.genre
 
 func get_all_games() -> Array[GameData]:
-	return CATALOGUE.games
+	var sorted_games = CATALOGUE.games.duplicate()
+	sorted_games.sort_custom(func(a, b): return a.title < b.title)
+	return sorted_games
 
 
 ## Displays the given game data inside the game panel in the catalogue app
