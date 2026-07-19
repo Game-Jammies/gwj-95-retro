@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bic6m3sa5mpk1" path="res://audio/background_noise.mp3" id="6_qujak"]
 [ext_resource type="AudioStream" uid="uid://bwm12x8paqcij" path="res://audio/mouse_click_down.mp3" id="7_r7spd"]
 [ext_resource type="Script" uid="uid://bwf5lc068aj7y" path="res://scripts/sfx_player.gd" id="8_k1np8"]
+[ext_resource type="AudioStream" uid="uid://pexp1rrlj845" path="res://audio/win98logoff.wav" id="11_5wtx6"]
 
 [node name="Computer" type="Control" unique_id=74978615]
 layout_mode = 3
@@ -20,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lea2j")
 window_load = ExtResource("2_8a8ig")
-spawn_pos = Vector2(400, 600)
+spawn_pos = Vector2(600, 400)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1046354256]
 layout_mode = 1
@@ -74,3 +75,7 @@ script = ExtResource("8_k1np8")
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="SFX Manager" unique_id=565926062]
 stream = ExtResource("7_r7spd")
 bus = &"SFX"
+
+[node name="Opening" type="AudioStreamPlayer" parent="." unique_id=1707891060]
+stream = ExtResource("11_5wtx6")
+autoplay = true
