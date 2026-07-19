@@ -43,7 +43,8 @@ folder_colors={
 "res://scenes/Computer/": "red",
 "res://scenes/GameCard/": "red",
 "res://scenes/Gameplay/": "yellow",
-"res://text/": "blue"
+"res://text/": "blue",
+"res://theme/": "pink"
 }
 
 [gui]
