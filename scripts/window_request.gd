@@ -13,6 +13,7 @@ const snd_correct = preload("res://audio/soundshelfstudio-mission-complete-chime
 @export var file_path : String #eg res://text/file.txt
 var game_desc: Array = []
 var target_game_title: String #the target game
+var prev_target: String
 @onready var dropdown = %OptionButton
 
 const CORRECT_MSG: String = "This is exactly what I wanted! Thank you!"
@@ -20,6 +21,8 @@ const INCORRECT_MSG: String = "No, I don't think this is what I'm looking for."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var popup = dropdown.get_popup()
+	popup.max_size.y = 200
 	%Feedback.visible = false
 	audio_player.stream = snd_notif
 	if file_path == "":
@@ -28,6 +31,7 @@ func _ready() -> void:
 		load_file()
 		load_random_game()
 	populate_dropdown()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,9 +51,11 @@ func load_file():
 		print("File doesn't exist, did you enter the right path?")
 		
 func load_random_game():
-	var target = game_desc.pick_random().split("%")
-	target_game_title = target[0].strip_edges()
-	%ContentText.text = target[1].strip_edges()
+	prev_target = target_game_title
+	while target_game_title == prev_target:
+		var target = game_desc.pick_random().split("%")
+		target_game_title = target[0].strip_edges()
+		%ContentText.text = target[1].strip_edges()
 	audio_player.stream = snd_notif
 	audio_player.play()
 
@@ -88,3 +94,4 @@ func _on_response_button_pressed():
 	load_random_game()
 	%TitleLabel.text = "Emails: Game Requested!"
 	%LowerBounds.visible = true
+	dropdown.select(0)
