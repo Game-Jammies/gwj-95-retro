@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="2_x25o0"]
 [ext_resource type="Texture2D" uid="uid://bpa5kh68oe7iv" path="res://assets/app_icons/icon_email.png" id="4_36o80"]
 [ext_resource type="Texture2D" uid="uid://wnwewh6sxuut" path="res://assets/art/os_window.png" id="6_rv0vr"]
+[ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="7_htlyc"]
 [ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="7_jnhwl"]
 [ext_resource type="Script" uid="uid://d3rdoi287i0qf" path="res://scripts/SizableBorderControl.gd" id="8_j53vt"]
 
@@ -148,6 +149,7 @@ offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("7_htlyc")
 
 [node name="LowerBounds" type="Control" parent="Window/Content" unique_id=331838409]
 unique_name_in_owner = true

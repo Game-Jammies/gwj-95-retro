@@ -1,3 +1,25 @@
 [gd_resource type="Theme" format=3 uid="uid://cvky8yq5xlw6f"]
 
+[ext_resource type="StyleBox" uid="uid://cw6hqew72cbqf" path="res://theme/style_box_panel_gray.tres" id="1_k4crv"]
+[ext_resource type="Texture2D" uid="uid://bstmqys3v4j3x" path="res://theme/os_panel_dark.png" id="1_wxok6"]
+[ext_resource type="StyleBox" uid="uid://clixh61rt63ab" path="res://theme/style_box_panel_light.tres" id="2_vatr3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m23im"]
+texture = ExtResource("1_wxok6")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
 [resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 0.8901961)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = ExtResource("1_k4crv")
+Button/styles/hover = ExtResource("1_k4crv")
+Button/styles/normal = ExtResource("1_k4crv")
+Button/styles/pressed = ExtResource("2_vatr3")
+OptionButton/styles/hover = ExtResource("1_k4crv")
+OptionButton/styles/normal = ExtResource("1_k4crv")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_m23im")

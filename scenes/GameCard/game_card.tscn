@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ceb8wuwmijs11" path="res://scenes/GameCard/game_card.gd" id="1_ismmn"]
 [ext_resource type="Texture2D" uid="uid://u7p8qd2yhsie" path="res://assets/art/BoxArt/Metroid.png" id="1_k6bol"]
+[ext_resource type="Texture2D" uid="uid://bstmqys3v4j3x" path="res://theme/os_panel_dark.png" id="2_pxyrt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vatr3"]
+texture = ExtResource("2_pxyrt")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
 
 [node name="GameCard" type="Control" unique_id=1830034026]
 custom_minimum_size = Vector2(150, 200)
@@ -22,6 +30,7 @@ layout_mode = 0
 offset_right = 145.0
 offset_bottom = 200.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vatr3")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1758075526]
 custom_maximum_size = Vector2(150, 200)
