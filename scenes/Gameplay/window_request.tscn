@@ -262,6 +262,8 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Okay"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1273676292]
+
 [connection signal="pressed" from="Window/FullTexture/CloseButton" to="Window" method="_on_close_pressed"]
 [connection signal="pressed" from="Window/Content/LowerBounds/SubmitButton" to="." method="_on_submit_button_clicked"]
 [connection signal="pressed" from="Window/Content/Feedback/ResponseButton" to="." method="_on_response_button_pressed"]
