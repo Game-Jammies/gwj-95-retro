@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://bbjlnv06kl0de"]
 
 [ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_dbkfs"]
+[ext_resource type="Texture2D" uid="uid://v03p8fxklfx1" path="res://assets/art/BoxArt/no image.png" id="1_nmwne"]
 
 [resource]
 script = ExtResource("1_dbkfs")
 title = "Silvereye 008"
 description = "Play the game based on the 1995 008 film. Jason Bondage must track down an agent-turned-terrorist Alex Tremblin to stop the launch of a powerful satelitte. "
+box_art = ExtResource("1_nmwne")
 maturity_rating = 1
 genre = Array[int]([3])
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

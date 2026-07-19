@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://dwh81filpxc6v"]
 
+[ext_resource type="Texture2D" uid="uid://dub6mvx0ummhb" path="res://assets/art/BoxArt/tomb raider.png" id="1_j3c0r"]
 [ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_psuoy"]
 
 [resource]
 script = ExtResource("1_psuoy")
 title = "Grave Robber"
 description = "Sara Craft, an archeologist and daughter to a rich aristrocratic family ventures across the world in search of three mysterious artifacts known as Scions. During her journey through Peru, Greece, and Egypt, Sara stumbles across thhe lost continent of atlantis."
+box_art = ExtResource("1_j3c0r")
 maturity_rating = 1
 genre = Array[int]([0, 3])
 developer = 8
