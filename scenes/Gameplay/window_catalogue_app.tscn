@@ -14,7 +14,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="Window" type="Control" parent="." unique_id=156546500]
-custom_minimum_size = Vector2(600, 800)
+custom_minimum_size = Vector2(800, 800)
 anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 350.0
@@ -170,7 +170,7 @@ offset_bottom = 34.0
 
 [node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
 layout_mode = 2
-text = "Emails: Game Requested!"
+text = "Catalogue"
 text_overrun_behavior = 3
 
 [connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]

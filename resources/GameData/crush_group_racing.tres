@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://b2qjtxsj43om8"]
 
+[ext_resource type="Texture2D" uid="uid://cptjrh8a0tu4s" path="res://assets/art/BoxArt/CRASH.png" id="1_hqrkl"]
 [ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_q20p1"]
 
 [resource]
 script = ExtResource("1_q20p1")
 title = "Crush Group Racing"
 description = "In the fourth installment of the Crush Opossum Series, an evil alien called Nitro Oxidation challenges Crash, his friends, and even his enemies to a racing competition to see who is the fastest in the universe."
+box_art = ExtResource("1_hqrkl")
 genre = Array[int]([5])
 developer = 1
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

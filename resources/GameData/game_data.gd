@@ -11,3 +11,18 @@ enum Developer { GAPGOM, GEENOX, ID_PROGRAM, JAITO_CORPORATION, JAKEFILM_GAMES, 
 @export var maturity_rating: MaturityRating = MaturityRating.EVERYONE
 @export var genre: Array[Genre] = [Genre.PLATFORMER]
 @export var developer: Developer = Developer.JINTENDO
+
+
+func get_maturity_rating_string() -> String:
+	return MaturityRating.keys()[maturity_rating].capitalize()
+
+
+func get_genre_strings() -> Array[String]:
+	var strings: Array[String] = []
+	for g in genre:
+		strings.append(Genre.keys()[g].capitalize())
+	return strings
+
+
+func get_developer_string() -> String:
+	return Developer.keys()[developer].capitalize()
