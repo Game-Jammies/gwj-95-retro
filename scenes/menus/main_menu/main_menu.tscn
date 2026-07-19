@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dnaejbfe1nvn1" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_m0ubd"]
 [ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_overlaid_window.tscn" id="5_627ab"]
 [ext_resource type="Texture2D" uid="uid://ykvk5qymos7c" path="res://assets/art/title screen.png" id="6_0jpat"]
+[ext_resource type="Texture2D" uid="uid://cqdnetvino2yw" path="res://assets/art/TitleScreen/offexit button.png" id="7_7j6ce"]
+[ext_resource type="Texture2D" uid="uid://c8n00xjf7v88n" path="res://assets/art/TitleScreen/settings button.png" id="8_qwqm5"]
+[ext_resource type="Texture2D" uid="uid://bi42drtp0tatw" path="res://assets/art/TitleScreen/start button.png" id="9_q0yg5"]
 
 [node name="MainMenu" unique_id=1058120615 instance=ExtResource("1_ub2bi")]
 theme = ExtResource("2_0jpat")
@@ -51,6 +54,7 @@ offset_right = 148.0
 offset_bottom = -19.0
 grow_vertical = 0
 tooltip_text = "Exit Game"
+texture_normal = ExtResource("7_7j6ce")
 
 [node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="2" unique_id=301223169]
 layout_mode = 1
@@ -77,6 +81,7 @@ offset_right = 278.0
 offset_bottom = -16.0
 grow_vertical = 0
 tooltip_text = "Options"
+texture_normal = ExtResource("8_qwqm5")
 
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="4" unique_id=1937938999]
 layout_mode = 1
@@ -92,6 +97,7 @@ offset_bottom = 34.0
 grow_horizontal = 0
 grow_vertical = 2
 tooltip_text = "Start Game"
+texture_normal = ExtResource("9_q0yg5")
 
 [node name="VersionMargin" parent="." index="4" unique_id=1732528471]
 visible = false
