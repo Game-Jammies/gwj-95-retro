@@ -9,8 +9,8 @@ func _ready() -> void:
 	for game in get_all_games():
 		var game_card = GAME_CARD_SCENE.instantiate()
 		# Fill in the game data
-		game_card.get_node("VBoxContainer/AspectRatioContainer/%BoxArt").texture = game.box_art
-		game_card.get_node("VBoxContainer/MarginContainer/%TitleLabel").text = game.title
+		game_card.get_node("%BoxArt").texture = game.box_art
+		game_card.get_node("%TitleLabel").text = game.title
 		game_container.add_child(game_card)
 		
 func get_all_games() -> Array[GameData]:
