@@ -56,7 +56,7 @@ anchor_right = 1.0
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "Title"
+text = "RETROBUSTER"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
@@ -110,25 +110,38 @@ alignment = 1
 vertical = true
 script = ExtResource("4_l1ebe")
 
-[node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=2044537792]
+[node name="ExitButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=1090235228]
 unique_name_in_owner = true
-layout_mode = 2
-text = "New Game"
+layout_mode = 0
+offset_left = 896.0
+offset_top = 538.0
+offset_right = 1024.0
+offset_bottom = 569.0
 
-[node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1486236076]
+[node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=301223169]
 unique_name_in_owner = true
-layout_mode = 2
-text = "Options"
-
-[node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=301223169]
-unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 896.0
+offset_top = 499.0
+offset_right = 1024.0
+offset_bottom = 530.0
 text = "Credits"
 
-[node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1750454379]
+[node name="OptionsButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=468526331]
 unique_name_in_owner = true
-layout_mode = 2
-text = "Exit"
+layout_mode = 0
+offset_left = 896.0
+offset_top = 476.0
+offset_right = 1024.0
+offset_bottom = 507.0
+
+[node name="NewGameButton" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=1937938999]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 896.0
+offset_top = 452.0
+offset_right = 1024.0
+offset_bottom = 483.0
 
 [node name="VersionMargin" type="MarginContainer" parent="." unique_id=1732528471]
 layout_mode = 1
@@ -171,12 +184,13 @@ offset_left = -150.0
 offset_top = -80.0
 offset_right = 150.0
 offset_bottom = 80.0
+ignore_siblings = false
 ui_cancel_closes = false
 title = "Exit Game?"
 text = "Really exit the game?"
 
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="confirmed" from="ExitConfirmation" to="." method="_on_exit_confirmation_confirmed"]
