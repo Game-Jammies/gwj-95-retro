@@ -20,14 +20,14 @@ func _ready() -> void:
 		game_container.add_child(game_card)
 
 func _on_game_card_pressed(game_data: GameData) -> void:
-	display_game(game_data)
+	_display_game(game_data)
 
 func get_all_games() -> Array[GameData]:
 	return CATALOGUE.games
 
 
 ## Displays the given game data inside the game panel in the catalogue app
-func display_game(game_data: GameData) -> void:
+func _display_game(game_data: GameData) -> void:
 	catalogue_container.hide()
 	
 	# Load game card data
@@ -42,7 +42,11 @@ func display_game(game_data: GameData) -> void:
 
 
 ## Displays the game catalogue
-func show_catalogue() -> void:
+func _show_catalogue() -> void:
 	game_panel.hide()
 	catalogue_container.show()
 	pass
+
+
+func _on_back_button_pressed() -> void:
+	_show_catalogue()

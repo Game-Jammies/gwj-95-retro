@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bshttvfs34bk5" path="res://scenes/Gameplay/catalogue_app.gd" id="1_56jao"]
 [ext_resource type="Texture2D" uid="uid://b6psbq7xfadn5" path="res://assets/art/BoxArt/Kirby.png" id="2_hccu0"]
-[ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="2_qt3m0"]
+[ext_resource type="Texture2D" uid="uid://cn78m1p8simyb" path="res://assets/art/back button.png" id="2_qt3m0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ionpo"]
 
@@ -14,6 +14,7 @@ script = ExtResource("1_56jao")
 
 [node name="CatalogueContainer" type="HSplitContainer" parent="." unique_id=1261857959]
 unique_name_in_owner = true
+visible = false
 offset_right = 800.0
 offset_bottom = 800.0
 theme = SubResource("Theme_m0153")
@@ -67,7 +68,6 @@ theme_override_constants/v_separation = 50
 
 [node name="GamePanel" type="Panel" parent="." unique_id=2096641309]
 unique_name_in_owner = true
-visible = false
 offset_right = 600.0
 offset_bottom = 800.0
 
@@ -86,9 +86,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BackButton" type="TextureButton" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1275799221]
-custom_minimum_size = Vector2(25, 25)
+custom_minimum_size = Vector2(30, 30)
+custom_maximum_size = Vector2(30, 30)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_qt3m0")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Title" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1899972292]
 unique_name_in_owner = true
@@ -139,3 +143,5 @@ offset_right = 600.0
 offset_bottom = 300.0
 text = "This is text that will show up in the description of the game. "
 fit_content = true
+
+[connection signal="pressed" from="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
