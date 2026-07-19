@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_ub2bi"]
 [ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="2_0jpat"]
 [ext_resource type="Script" uid="uid://u3hoafvcejmm" path="res://scenes/menus/main_menu/main_menu.gd" id="2_x31ro"]
-[ext_resource type="PackedScene" uid="uid://mhk7ai1jtttm" path="res://scenes/windows/main_menu_options_window.tscn" id="3_0jpat"]
+[ext_resource type="PackedScene" uid="uid://ytsxm0ga3cgx" path="res://scenes/menus/options_menu/custom_options_menu.tscn" id="4_7j6ce"]
 [ext_resource type="PackedScene" uid="uid://dnaejbfe1nvn1" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_m0ubd"]
 [ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_overlaid_window.tscn" id="5_627ab"]
 [ext_resource type="Texture2D" uid="uid://ykvk5qymos7c" path="res://assets/art/title screen.png" id="6_0jpat"]
@@ -16,7 +16,7 @@ theme = ExtResource("2_0jpat")
 script = ExtResource("2_x31ro")
 level_select_packed_scene = null
 confirm_new_game = true
-options_packed_scene = ExtResource("3_0jpat")
+options_packed_scene = ExtResource("4_7j6ce")
 credits_packed_scene = ExtResource("4_m0ubd")
 
 [node name="BackgroundTextureRect" parent="." index="2" unique_id=1940176448]
