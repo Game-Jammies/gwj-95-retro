@@ -9,6 +9,7 @@ offset_right = 100.0
 offset_bottom = 127.0
 script = ExtResource("1_7dv23")
 window_load = ExtResource("2_qx6vd")
+spawn_pos = Vector2(50, 100)
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1175588062]
 custom_minimum_size = Vector2(100, 100)

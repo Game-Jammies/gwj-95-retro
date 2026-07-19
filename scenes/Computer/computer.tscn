@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bfat87osjjexk" path="res://assets/art/Desktop Blank.png" id="1_4xq8f"]
 [ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_email.tscn" id="1_hkthn"]
 [ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
+[ext_resource type="PackedScene" uid="uid://vcggyfbaghmv" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_catalogue.tscn" id="4_qujak"]
 [ext_resource type="PackedScene" uid="uid://c7cjqnjico36q" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_settings.tscn" id="4_vyhg6"]
 [ext_resource type="PackedScene" uid="uid://c1hjspwnp3sxb" path="res://scenes/Computer/taskbar.tscn" id="5_2rem3"]
 
@@ -45,9 +46,14 @@ theme_override_constants/v_separation = 40
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
-[node name="SettingsApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=177136333 instance=ExtResource("4_vyhg6")]
+[node name="CatalogueShortcut" parent="ScreenMarginContainer/HFlowContainer" unique_id=177136333 instance=ExtResource("4_qujak")]
+layout_mode = 2
+
+[node name="SettingsApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=357621122 instance=ExtResource("4_vyhg6")]
 layout_mode = 2
 
 [node name="Taskbar" parent="." unique_id=1460470293 instance=ExtResource("5_2rem3")]
 layout_mode = 1
 anchors_preset = 12
+offset_top = 0.0
+grow_vertical = 0

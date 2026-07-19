@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://vcggyfbaghmv"]
+
+[ext_resource type="Script" uid="uid://dboqitdbrln3n" path="res://scripts/shortcut.gd" id="1_yug53"]
+[ext_resource type="PackedScene" uid="uid://b7bvb48mqcy51" path="res://scenes/Gameplay/window_catalogue_app.tscn" id="2_yug53"]
+[ext_resource type="Texture2D" uid="uid://cf77mc07j26a4" path="res://assets/plugin_logo/logo.png" id="3_yug53"]
+
+[node name="CatalogueShortcut" type="VBoxContainer" unique_id=177136333]
+offset_right = 100.0
+offset_bottom = 127.0
+script = ExtResource("1_yug53")
+window_load = ExtResource("2_yug53")
+spawn_pos = Vector2(200, 50)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1175588062]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_yug53")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=360714197]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Catalogue"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="spawn_object"]
