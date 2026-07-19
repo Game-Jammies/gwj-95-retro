@@ -3,12 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bfat87osjjexk" path="res://assets/art/Desktop Blank.png" id="1_4xq8f"]
 [ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_email.tscn" id="1_hkthn"]
 [ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
+[ext_resource type="PackedScene" uid="uid://dt6xj8uedkkwx" path="res://scenes/Gameplay/window_tutorial.tscn" id="2_8a8ig"]
 [ext_resource type="PackedScene" uid="uid://vcggyfbaghmv" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_catalogue.tscn" id="4_qujak"]
 [ext_resource type="PackedScene" uid="uid://c7cjqnjico36q" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_settings.tscn" id="4_vyhg6"]
 [ext_resource type="PackedScene" uid="uid://c1hjspwnp3sxb" path="res://scenes/Computer/taskbar.tscn" id="5_2rem3"]
 [ext_resource type="AudioStream" uid="uid://bic6m3sa5mpk1" path="res://audio/background_noise.mp3" id="6_qujak"]
 [ext_resource type="AudioStream" uid="uid://bwm12x8paqcij" path="res://audio/mouse_click_down.mp3" id="7_r7spd"]
 [ext_resource type="Script" uid="uid://bwf5lc068aj7y" path="res://scripts/sfx_player.gd" id="8_k1np8"]
+[ext_resource type="AudioStream" uid="uid://pexp1rrlj845" path="res://audio/win98logoff.wav" id="11_5wtx6"]
 
 [node name="Computer" type="Control" unique_id=74978615]
 layout_mode = 3
@@ -18,6 +20,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lea2j")
+window_load = ExtResource("2_8a8ig")
+spawn_pos = Vector2(600, 400)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1046354256]
 layout_mode = 1
@@ -71,3 +75,7 @@ script = ExtResource("8_k1np8")
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="SFX Manager" unique_id=565926062]
 stream = ExtResource("7_r7spd")
 bus = &"SFX"
+
+[node name="Opening" type="AudioStreamPlayer" parent="." unique_id=1707891060]
+stream = ExtResource("11_5wtx6")
+autoplay = true
