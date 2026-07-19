@@ -170,7 +170,7 @@ offset_bottom = 34.0
 
 [node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
 layout_mode = 2
-text = "Emails: Game Requested!"
+text = "Catalogue"
 text_overrun_behavior = 3
 
 [connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]

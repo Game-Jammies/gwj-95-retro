@@ -1,26 +1,34 @@
 [gd_scene format=3 uid="uid://chgsyctccshsw"]
 
+[ext_resource type="Script" uid="uid://ceb8wuwmijs11" path="res://scenes/GameCard/game_card.gd" id="1_ismmn"]
 [ext_resource type="Texture2D" uid="uid://u7p8qd2yhsie" path="res://assets/art/BoxArt/Metroid.png" id="1_k6bol"]
 
 [node name="GameCard" type="Control" unique_id=1830034026]
+custom_minimum_size = Vector2(150, 200)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -650.0
+offset_bottom = -600.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("1_ismmn")
 
 [node name="Panel" type="Panel" parent="." unique_id=1050627598]
 custom_minimum_size = Vector2(150, 200)
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 200.0
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1758075526]
 custom_maximum_size = Vector2(150, 200)
 layout_mode = 0
 offset_right = 159.0
 offset_bottom = 231.0
+mouse_filter = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
@@ -29,16 +37,19 @@ theme_override_constants/margin_bottom = 8
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=725707515]
 clip_contents = true
 layout_mode = 2
+mouse_filter = 2
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1580436339]
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 alignment_vertical = 0
 
 [node name="BoxArt" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/AspectRatioContainer" unique_id=175407382]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("1_k6bol")
 expand_mode = 1
 
@@ -46,6 +57,7 @@ expand_mode = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(135, 60)
 layout_mode = 2
+mouse_filter = 2
 text = "Game Title "
 scroll_active = false
 autowrap_mode = 2

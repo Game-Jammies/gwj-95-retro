@@ -12,7 +12,8 @@ HSplitContainer/styles/split_bar_background = SubResource("StyleBoxEmpty_ionpo")
 [node name="CatalogueApp" type="Node2D" unique_id=130923106]
 script = ExtResource("1_56jao")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1261857959]
+[node name="CatalogueContainer" type="HSplitContainer" parent="." unique_id=1261857959]
+unique_name_in_owner = true
 offset_right = 800.0
 offset_bottom = 800.0
 theme = SubResource("Theme_m0153")
@@ -22,55 +23,50 @@ split_offsets = PackedInt32Array(364)
 dragging_enabled = false
 split_offset = 364
 
-[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer" unique_id=1609187805]
+[node name="PanelContainer" type="PanelContainer" parent="CatalogueContainer" unique_id=1609187805]
 custom_maximum_size = Vector2(142, -1)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/PanelContainer" unique_id=1567962431]
+[node name="MarginContainer" type="MarginContainer" parent="CatalogueContainer/PanelContainer" unique_id=1567962431]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/PanelContainer/MarginContainer" unique_id=2080342175]
+[node name="VBoxContainer" type="VBoxContainer" parent="CatalogueContainer/PanelContainer/MarginContainer" unique_id=2080342175]
 custom_minimum_size = Vector2(200, 600)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=252153888]
+[node name="RichTextLabel" type="RichTextLabel" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=252153888]
 layout_mode = 2
 text = "Genre"
 fit_content = true
 
-[node name="LinkButton" type="LinkButton" parent="HSplitContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=784908634]
+[node name="LinkButton" type="LinkButton" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=784908634]
 layout_mode = 2
 text = "Action"
 
-[node name="LinkButton2" type="LinkButton" parent="HSplitContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1575856437]
+[node name="LinkButton2" type="LinkButton" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1575856437]
 layout_mode = 2
 text = "Adventure"
 
-[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer" unique_id=2146411386]
+[node name="MarginContainer" type="MarginContainer" parent="CatalogueContainer" unique_id=2146411386]
 layout_mode = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MarginContainer" unique_id=36025043]
+[node name="ScrollContainer" type="ScrollContainer" parent="CatalogueContainer/MarginContainer" unique_id=36025043]
 layout_mode = 2
 
-[node name="GameContainer" type="HFlowContainer" parent="HSplitContainer/MarginContainer/ScrollContainer" unique_id=597871606]
+[node name="GameContainer" type="HFlowContainer" parent="CatalogueContainer/MarginContainer/ScrollContainer" unique_id=597871606]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(550, 775)
 layout_mode = 2
-theme_override_constants/h_separation = 200
-theme_override_constants/v_separation = 250
-
-[node name="CataloguePanel" type="Panel" parent="." unique_id=1335884375]
-visible = false
-offset_left = 648.0
-offset_right = 800.0
-offset_bottom = 800.0
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
 
 [node name="GamePanel" type="Panel" parent="." unique_id=2096641309]
+unique_name_in_owner = true
 visible = false
 offset_right = 600.0
 offset_bottom = 800.0
@@ -95,27 +91,32 @@ layout_mode = 2
 texture_normal = ExtResource("2_qt3m0")
 
 [node name="Title" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1899972292]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Title
 "
 fit_content = true
 
 [node name="Genre" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968898398]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Genre"
 fit_content = true
 
-[node name="System" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=817319727]
+[node name="Developer" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=817319727]
+unique_name_in_owner = true
 layout_mode = 2
 text = "System"
 fit_content = true
 
 [node name="MaturityRating" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=645273681]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Maturity Rating"
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="GamePanel/VBoxContainer/HBoxContainer" unique_id=702867391]
+[node name="BoxArt" type="TextureRect" parent="GamePanel/VBoxContainer/HBoxContainer" unique_id=702867391]
+unique_name_in_owner = true
 custom_maximum_size = Vector2(200, 300)
 clip_contents = true
 layout_mode = 2
@@ -129,7 +130,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(600, 200)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GamePanel/VBoxContainer/ScrollContainer/Panel" unique_id=1826747919]
+[node name="Description" type="RichTextLabel" parent="GamePanel/VBoxContainer/ScrollContainer/Panel" unique_id=1826747919]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(600, 300)
 clip_contents = false
 layout_mode = 0
