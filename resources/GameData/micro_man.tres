@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://diofqk0tn83sv"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_wf5kq"]
+
+[resource]
+script = ExtResource("1_wf5kq")
+title = "Micro Man"
+description = " Micro Man is a lab assistant robot who volunteers to be enhanced for fighting to stop a mad scientist, Dr. Lywi, and his six Robot Champs, from world domination. "
+system = 0
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

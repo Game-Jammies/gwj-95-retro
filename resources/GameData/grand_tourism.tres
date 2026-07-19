@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cealsk20g8ieu"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_m1of0"]
+
+[resource]
+script = ExtResource("1_m1of0")
+title = "Grand Tourism"
+description = "Race with realistic driving physics and collect up to 140 different vehicles that are a licensed copy of the real thing! Race, upgrade, and show off your new ride as you unlock new tracks around the world."
+genre = Array[int]([5])
+developer = 7
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

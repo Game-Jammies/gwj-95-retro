@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://c1ohlnqhqegc5"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_qb7f6"]
+
+[resource]
+script = ExtResource("1_qb7f6")
+title = "Jonic The Porcupine"
+description = "Jonic the Porcupine, a blue porcupine with supersonic speed, must navigate the terrain and dodge hazards to foil the plans of Dr. Roumbanik, a mad scientist who imprisoned animals to turn them into robots and is trying to find the Chaos Stones."
+genre = Array[int]([1, 0])
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

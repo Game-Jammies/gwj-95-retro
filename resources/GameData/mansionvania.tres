@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cmd0hedbfysjr"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_1se10"]
+[ext_resource type="Texture2D" uid="uid://c2bp5524jkrul" path="res://assets/art/BoxArt/Castlevania.png" id="1_mtivr"]
+
+[resource]
+script = ExtResource("1_1se10")
+title = "Mansionvania"
+description = "In 1691, Simone Trelmont , descendant of a legendary vampire hunter, enters the ridiculously huge mansion of CEO Dracula to destroy him with the inherited \"Vampire Slayer\" whip when CEO Dracula suddenly reappears hundred years after Simone's ancestor vanquished him. "
+box_art = ExtResource("1_mtivr")
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

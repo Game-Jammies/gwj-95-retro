@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c1hjspwnp3sxb"]
+
+[ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="1_agh6m"]
+
+[node name="Taskbar" type="Control" unique_id=1411674670]
+layout_mode = 3
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1763950751]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 170.0
+offset_bottom = 65.0
+text = "Test Button"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1363740538]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 65.0
+texture_normal = ExtResource("1_agh6m")
+stretch_mode = 0

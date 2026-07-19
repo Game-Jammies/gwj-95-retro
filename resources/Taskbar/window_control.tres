@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WindowInfo" format=3 uid="uid://bm1ttiwenmyxf"]
+
+[ext_resource type="Script" uid="uid://df7rdaprh564b" path="res://resources/Taskbar/window_info.gd" id="1_0nu0s"]
+[ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="1_fvkp0"]
+[ext_resource type="PackedScene" uid="uid://b6n8bi8fb4qnq" path="res://scenes/Gameplay/window_control.tscn" id="3_578ml"]
+
+[resource]
+script = ExtResource("1_0nu0s")
+title = "Test"
+icon = ExtResource("1_fvkp0")
+window = ExtResource("3_578ml")
+metadata/_custom_type_script = "uid://df7rdaprh564b"

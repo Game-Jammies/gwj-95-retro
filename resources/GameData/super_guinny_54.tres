@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cbwjui874jjvi"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_lkfds"]
+
+[resource]
+script = ExtResource("1_lkfds")
+title = "Super Guinny 54"
+description = "When evil King Browser takes 120 Stars and traps Princess Piguette in her own castle, it is up to Guinny to jump through and explore the castle's paintings to complete his mission of saving the princess."
+genre = Array[int]([0])
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

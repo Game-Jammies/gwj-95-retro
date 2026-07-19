@@ -1,12 +1,19 @@
 extends Node
+"""Handles the requests for windows"""
+
+const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
 
 @export var file_path : String #eg res://text/file.txt
 var game_desc: Array = []
 var target_game_title: String #the target game
 @onready var dropdown = %OptionButton
 
+const CORRECT_MSG: String = "This is exactly what I wanted! Thank you!"
+const INCORRECT_MSG: String = "No, I don't think this is what I'm looking for."
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	%Feedback.visible = false
 	if file_path == "":
 		print("You didn't set the file path!")
 	else:
@@ -42,23 +49,28 @@ func populate_dropdown():
 	#remove the dummy options when we do the TODO above
 	dropdown.clear()
 	dropdown.add_item("SELECT GAME", 0)
-	"""
-	for game in gamecatalogue:
-		dropdown.add_item(game) (make sure game is a string)
-	"""
-	dropdown.add_item("Mario")
-	dropdown.add_item("Zelda")
+
+	for game in CATALOGUE.games:
+		dropdown.add_item(game.title)
 	
 	dropdown.selected = 0
 	
 func _on_submit_button_clicked():
 	#TODO: emit a signal from the dropdown.get_selected_id()
+	print(target_game_title)
 	if dropdown.get_selected_id() > 0:
-		dropdown.get_selected_id()
-		print(dropdown.get_selected_id())
-	#or have it check the correct game here (optional)
+		%LowerBounds.visible = false
 		var selected_game = dropdown.get_item_text(dropdown.selected)
-		if selected_game == target_game_title:
-			print("Correct game selected wow")
+		print(selected_game)
+		if selected_game.to_upper() == target_game_title.to_upper():
+			%ResponseText.text = CORRECT_MSG
 		else:
-			print("you suck")
+			%ResponseText.text = INCORRECT_MSG
+		%TitleLabel.text = "Emails: Response from Customer"
+		%Feedback.visible = true
+
+func _on_response_button_pressed():
+	%Feedback.visible = false
+	load_random_game()
+	%TitleLabel.text = "Emails: Game Requested!"
+	%LowerBounds.visible = true

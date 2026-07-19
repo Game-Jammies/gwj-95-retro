@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://chcblwl6a044c"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_5plb0"]
+
+[resource]
+script = ExtResource("1_5plb0")
+title = "Jonic Drifting"
+description = "Race as characters fom the Jonic the Porcupine game, like Jonic himself, Heads, Ami, and Dr. Roumbanik, in 18 different tracks inspired from the original game!"
+genre = Array[int]([5])
+developer = 10
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

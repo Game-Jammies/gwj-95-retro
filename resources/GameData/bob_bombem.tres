@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://c050qkdftn6lm"]
+
+[ext_resource type="Script" uid="uid://bpuyl30lrwtm1" path="res://resources/GameData/game_data.gd" id="1_v3e11"]
+
+[resource]
+script = ExtResource("1_v3e11")
+title = "Bob Bombem"
+description = "Follow Bob Bombem, a CIA top operative, who is sent to stop a radiation-lobotomized mad scientist known as Dr. Neutron. The evil doctor is trying to conquer the world with an army of Mechbots as Bob chases him to his base, and pursues him through time, to try and put an end to his scheme. "
+maturity_rating = 1
+genre = Array[int]([3])
+developer = 12
+metadata/_custom_type_script = "uid://bpuyl30lrwtm1"
