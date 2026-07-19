@@ -12,9 +12,19 @@ HSplitContainer/styles/split_bar_background = SubResource("StyleBoxEmpty_ionpo")
 [node name="CatalogueApp" type="Node2D" unique_id=130923106]
 script = ExtResource("1_56jao")
 
-[node name="CatalogueContainer" type="HSplitContainer" parent="." unique_id=1261857959]
+[node name="Control" type="Control" parent="." unique_id=430947370]
+custom_minimum_size = Vector2(800, 800)
+custom_maximum_size = Vector2(800, 800)
+propagate_maximum_size = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CatalogueContainer" type="HSplitContainer" parent="Control" unique_id=1261857959]
 unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_right = 800.0
 offset_bottom = 800.0
 theme = SubResource("Theme_m0153")
@@ -24,68 +34,74 @@ split_offsets = PackedInt32Array(364)
 dragging_enabled = false
 split_offset = 364
 
-[node name="PanelContainer" type="PanelContainer" parent="CatalogueContainer" unique_id=1609187805]
+[node name="PanelContainer" type="PanelContainer" parent="Control/CatalogueContainer" unique_id=1609187805]
 custom_maximum_size = Vector2(142, -1)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CatalogueContainer/PanelContainer" unique_id=1567962431]
+[node name="MarginContainer" type="MarginContainer" parent="Control/CatalogueContainer/PanelContainer" unique_id=1567962431]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CatalogueContainer/PanelContainer/MarginContainer" unique_id=2080342175]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CatalogueContainer/PanelContainer/MarginContainer" unique_id=2080342175]
 custom_minimum_size = Vector2(200, 600)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=252153888]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=252153888]
 layout_mode = 2
 text = "Genre"
 fit_content = true
 
-[node name="LinkButton" type="LinkButton" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=784908634]
+[node name="LinkButton" type="LinkButton" parent="Control/CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=784908634]
 layout_mode = 2
 text = "Action"
 
-[node name="LinkButton2" type="LinkButton" parent="CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1575856437]
+[node name="LinkButton2" type="LinkButton" parent="Control/CatalogueContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1575856437]
 layout_mode = 2
 text = "Adventure"
 
-[node name="MarginContainer" type="MarginContainer" parent="CatalogueContainer" unique_id=2146411386]
+[node name="MarginContainer" type="MarginContainer" parent="Control/CatalogueContainer" unique_id=2146411386]
 layout_mode = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CatalogueContainer/MarginContainer" unique_id=36025043]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/CatalogueContainer/MarginContainer" unique_id=36025043]
 layout_mode = 2
 
-[node name="GameContainer" type="HFlowContainer" parent="CatalogueContainer/MarginContainer/ScrollContainer" unique_id=597871606]
+[node name="GameContainer" type="HFlowContainer" parent="Control/CatalogueContainer/MarginContainer/ScrollContainer" unique_id=597871606]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(550, 775)
 layout_mode = 2
 theme_override_constants/h_separation = 50
 theme_override_constants/v_separation = 50
 
-[node name="GamePanel" type="Panel" parent="." unique_id=2096641309]
+[node name="GamePanel" type="PanelContainer" parent="Control" unique_id=778761349]
 unique_name_in_owner = true
-offset_right = 600.0
+layout_mode = 0
+offset_right = 800.0
 offset_bottom = 800.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GamePanel" unique_id=923352704]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="Control/GamePanel" unique_id=196479741]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GamePanel/VBoxContainer" unique_id=1926293707]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/GamePanel/MarginContainer" unique_id=923352704]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GamePanel/VBoxContainer/HBoxContainer" unique_id=1133863098]
-custom_minimum_size = Vector2(300, 350)
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer" unique_id=1926293707]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1133863098]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 12
 
-[node name="BackButton" type="TextureButton" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1275799221]
+[node name="BackButton" type="TextureButton" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1275799221]
 custom_minimum_size = Vector2(30, 30)
 custom_maximum_size = Vector2(30, 30)
 layout_mode = 2
@@ -94,54 +110,95 @@ texture_normal = ExtResource("2_qt3m0")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Title" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1899972292]
+[node name="Title" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1899972292]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
 text = "Title
 "
 fit_content = true
+horizontal_alignment = 1
 
-[node name="Genre" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968898398]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=171828277]
+layout_mode = 2
+theme_override_constants/underline_alpha = 50
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[u]GENRE[/u]"
+fit_content = true
+
+[node name="Genre" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968898398]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Genre"
 fit_content = true
 
-[node name="Developer" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=817319727]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=757390062]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[u]DEVELOPER[/u]"
+fit_content = true
+
+[node name="Developer" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=817319727]
 unique_name_in_owner = true
 layout_mode = 2
 text = "System"
 fit_content = true
 
-[node name="MaturityRating" type="RichTextLabel" parent="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=645273681]
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1151604096]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[u]MATURITY RATING[/u]"
+fit_content = true
+
+[node name="MaturityRating" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=645273681]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Maturity Rating"
 fit_content = true
 
-[node name="BoxArt" type="TextureRect" parent="GamePanel/VBoxContainer/HBoxContainer" unique_id=702867391]
+[node name="MarginContainer" type="MarginContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1358541568]
+layout_mode = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="BoxArt" type="TextureRect" parent="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=702867391]
 unique_name_in_owner = true
 custom_maximum_size = Vector2(200, 300)
 clip_contents = true
 layout_mode = 2
 texture = ExtResource("2_hccu0")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="GamePanel/VBoxContainer" unique_id=1464484943]
-custom_minimum_size = Vector2(600, 200)
+[node name="MarginContainer" type="MarginContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer" unique_id=1859209797]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 12
 
-[node name="Panel" type="Panel" parent="GamePanel/VBoxContainer/ScrollContainer" unique_id=982580723]
-custom_minimum_size = Vector2(600, 200)
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=1464484943]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Description" type="RichTextLabel" parent="GamePanel/VBoxContainer/ScrollContainer/Panel" unique_id=1826747919]
+[node name="Panel" type="PanelContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer" unique_id=982580723]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/GamePanel/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/Panel" unique_id=-1149070085]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Description" type="RichTextLabel" parent="Control/GamePanel/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/Panel/MarginContainer" unique_id=1826747919]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(600, 300)
-clip_contents = false
-layout_mode = 0
-offset_right = 600.0
-offset_bottom = 300.0
+layout_mode = 2
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 20
 text = "This is text that will show up in the description of the game. "
 fit_content = true
 
-[connection signal="pressed" from="GamePanel/VBoxContainer/HBoxContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Control/GamePanel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
