@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c7cjqnjico36q"]
+
+[ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="1_mrlwg"]
+[ext_resource type="Script" uid="uid://dboqitdbrln3n" path="res://scripts/shortcut.gd" id="2_mdh6g"]
+[ext_resource type="PackedScene" uid="uid://dnejs1wcmiwwr" path="res://scenes/Gameplay/window_options.tscn" id="3_mrlwg"]
+[ext_resource type="Texture2D" uid="uid://bhxsllyixosdr" path="res://assets/app_icons/icon_settings.png" id="4_cemsx"]
+
+[node name="SettingsShortcut" type="VBoxContainer" unique_id=177136333]
+offset_right = 100.0
+offset_bottom = 127.0
+theme = ExtResource("1_mrlwg")
+script = ExtResource("2_mdh6g")
+window_load = ExtResource("3_mrlwg")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1175588062]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_cemsx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=360714197]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="spawn_object"]

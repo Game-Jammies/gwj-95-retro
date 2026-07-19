@@ -25,12 +25,6 @@ texture = ExtResource("6_0jpat")
 [node name="TitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(396616752) index="0" unique_id=2112060331]
 visible = false
 
-[node name="SubTitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(396616752) index="1" unique_id=1510335937]
-visible = false
-
-[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" parent_id_path=PackedInt32Array(930520368) index="0" unique_id=1037003361]
-text = "Made for Godot WIld Jam 95"
-
 [node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" parent_id_path=PackedInt32Array(2017477786) index="0" unique_id=2077321160]
 unique_name_in_owner = true
 visible = false
@@ -98,9 +92,6 @@ grow_horizontal = 0
 grow_vertical = 2
 tooltip_text = "Start Game"
 texture_normal = ExtResource("9_q0yg5")
-
-[node name="VersionMargin" parent="." index="4" unique_id=1732528471]
-visible = false
 
 [node name="NewGameConfirmation" parent="." index="5" unique_id=613417993 instance=ExtResource("5_627ab")]
 unique_name_in_owner = true

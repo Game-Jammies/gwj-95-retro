@@ -1,22 +1,18 @@
 [gd_scene format=3 uid="uid://ytsxm0ga3cgx"]
 
+[ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="1_ks3yr"]
 [ext_resource type="PackedScene" uid="uid://do13av6o47wfd" path="res://scenes/menus/options_menu/audio/audio_options_menu.tscn" id="4_v1ece"]
 [ext_resource type="PackedScene" uid="uid://xvjrr8tkua0r" path="res://scenes/menus/options_menu/video/video_options_menu_with_extras.tscn" id="5_o0k4m"]
 
 [node name="PanelContainer" type="PanelContainer" unique_id=1266740449]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -187.0
-offset_right = 200.0
-offset_bottom = 187.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("1_ks3yr")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1048042173]
 layout_mode = 2

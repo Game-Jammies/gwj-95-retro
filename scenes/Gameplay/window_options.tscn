@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dnejs1wcmiwwr"]
+
+[ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="1_a1ca2"]
+[ext_resource type="Texture2D" uid="uid://wnwewh6sxuut" path="res://assets/art/os_window.png" id="2_jcppy"]
+[ext_resource type="Texture2D" uid="uid://bhxsllyixosdr" path="res://assets/app_icons/icon_settings.png" id="3_jcppy"]
+[ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="4_d3t8x"]
+[ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="6_sdx7r"]
+[ext_resource type="PackedScene" uid="uid://ytsxm0ga3cgx" path="res://scenes/menus/options_menu/custom_options_menu.tscn" id="7_jcppy"]
+
+[node name="WindowRequest" type="Control" unique_id=436124811]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Window" type="Control" parent="." unique_id=1819028383]
+custom_minimum_size = Vector2(200, 300)
+anchors_preset = 0
+offset_right = 455.0
+offset_bottom = 608.0
+script = ExtResource("1_a1ca2")
+
+[node name="FullTexture" type="NinePatchRect" parent="Window" unique_id=1766154825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jcppy")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 11
+patch_margin_top = 51
+patch_margin_right = 54
+patch_margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="Window/FullTexture" unique_id=463389239]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 36.0
+offset_bottom = 34.0
+texture = ExtResource("3_jcppy")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="Window/FullTexture" unique_id=262226459]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 9.0
+offset_right = -55.0
+offset_bottom = 35.0
+grow_horizontal = 2
+text = "Options"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="CloseButton" type="Button" parent="Window/FullTexture" unique_id=572438453]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -43.0
+offset_top = 5.0
+offset_right = 13.666626
+offset_bottom = 61.666668
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+
+[node name="MovableBorderControl2" type="Control" parent="Window" unique_id=1991980437 node_paths=PackedStringArray("move_target")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -49.0
+offset_bottom = 39.0
+grow_horizontal = 2
+mouse_filter = 1
+script = ExtResource("4_d3t8x")
+move_target = NodePath("..")
+metadata/_custom_type_script = "uid://dlrox1ajgxk51"
+
+[node name="Content" type="Control" parent="Window" unique_id=235497461]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 47.0
+offset_right = -11.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("6_sdx7r")
+
+[node name="Feedback" type="Control" parent="Window/Content" unique_id=1122176066]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" parent="Window/Content/Feedback" unique_id=1266740449 instance=ExtResource("7_jcppy")]
+layout_mode = 1
+
+[connection signal="pressed" from="Window/FullTexture/CloseButton" to="Window" method="_on_close_pressed"]
