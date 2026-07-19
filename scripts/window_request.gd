@@ -1,4 +1,4 @@
-extends Node
+extends WindowBase
 """Handles the requests for windows"""
 
 const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
@@ -66,11 +66,11 @@ func _on_submit_button_clicked():
 			%ResponseText.text = CORRECT_MSG
 		else:
 			%ResponseText.text = INCORRECT_MSG
-		%TitleLabel.text = "Emails: Response from Customer"
+		set_title("Emails: Response from Customer")
 		%Feedback.visible = true
 
 func _on_response_button_pressed():
 	%Feedback.visible = false
 	load_random_game()
-	%TitleLabel.text = "Emails: Game Requested!"
+	set_title("Emails: Game Requested!")
 	%LowerBounds.visible = true
