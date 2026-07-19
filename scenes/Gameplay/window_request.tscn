@@ -158,10 +158,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = -1.0
-offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -170,11 +166,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
 
 [node name="ContentText" type="Label" parent="Window/Content/LowerBounds/MarginContainer" unique_id=1084320785]
 unique_name_in_owner = true
@@ -186,20 +184,35 @@ text = "Sample Text Sample Text Sample Text Bluju"
 autowrap_mode = 3
 
 [node name="SubmitButton" type="Button" parent="Window/Content/LowerBounds" unique_id=1845400338]
-layout_mode = 0
-offset_left = 260.0
-offset_top = 206.0
-offset_right = 344.0
-offset_bottom = 251.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = -71.0
+offset_right = 165.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Submit"
 
 [node name="OptionButton" type="OptionButton" parent="Window/Content/LowerBounds" unique_id=845408862]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 46.0
-offset_top = 214.0
-offset_right = 210.0
-offset_bottom = 245.0
+custom_maximum_size = Vector2(235, -1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -167.0
+offset_top = -71.0
+offset_right = 68.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Feedback" type="Control" parent="Window/Content" unique_id=387972931]
 unique_name_in_owner = true
@@ -209,10 +222,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 17.0
-offset_top = 47.0
-offset_right = -16.0
-offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -221,11 +230,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
 
 [node name="ResponseText" type="Label" parent="Window/Content/Feedback/MarginContainer" unique_id=2037694978]
 unique_name_in_owner = true
