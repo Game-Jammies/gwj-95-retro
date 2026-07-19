@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="1_cbx4r"]
 [ext_resource type="Texture2D" uid="uid://wnwewh6sxuut" path="res://assets/art/os_window.png" id="2_uqrjw"]
-[ext_resource type="Texture2D" uid="uid://bhxsllyixosdr" path="res://assets/app_icons/icon_settings.png" id="3_uqrjw"]
+[ext_resource type="Texture2D" uid="uid://dplehk7444udd" path="res://assets/app_icons/icon_catalogue.png" id="3_uqrjw"]
 [ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="5_wfyak"]
 [ext_resource type="Script" uid="uid://d3rdoi287i0qf" path="res://scripts/SizableBorderControl.gd" id="6_hvfja"]
 [ext_resource type="PackedScene" uid="uid://dptgu8ctrc2uk" path="res://scenes/Gameplay/catalogue_app.tscn" id="7_74dag"]
