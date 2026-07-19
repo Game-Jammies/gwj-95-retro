@@ -1,7 +1,14 @@
 extends Node
 """Handles the requests for windows"""
 
+#Resources
 const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
+
+#Sounds
+@onready var audio_player = $AudioStreamPlayer
+const snd_notif = preload("res://audio/notification msg.mp3")
+const snd_incorrect = preload("res://audio/error msg.mp3")
+const snd_correct = preload("res://audio/soundshelfstudio-mission-complete-chime-534595.mp3")
 
 @export var file_path : String #eg res://text/file.txt
 var game_desc: Array = []
@@ -14,6 +21,7 @@ const INCORRECT_MSG: String = "No, I don't think this is what I'm looking for."
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%Feedback.visible = false
+	audio_player.stream = snd_notif
 	if file_path == "":
 		print("You didn't set the file path!")
 	else:
@@ -42,6 +50,8 @@ func load_random_game():
 	var target = game_desc.pick_random().split("%")
 	target_game_title = target[0].strip_edges()
 	%ContentText.text = target[1].strip_edges()
+	audio_player.stream = snd_notif
+	audio_player.play()
 
 func populate_dropdown():
 	"""Populates the OptionButton to include"""
@@ -64,8 +74,12 @@ func _on_submit_button_clicked():
 		print(selected_game)
 		if selected_game.to_upper() == target_game_title.to_upper():
 			%ResponseText.text = CORRECT_MSG
+			audio_player.stream = snd_correct
+			audio_player.play()
 		else:
 			%ResponseText.text = INCORRECT_MSG
+			audio_player.stream = snd_incorrect
+			audio_player.play()
 		%TitleLabel.text = "Emails: Response from Customer"
 		%Feedback.visible = true
 

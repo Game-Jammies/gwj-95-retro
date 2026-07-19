@@ -204,6 +204,7 @@ layout_mode = 1
 offset_left = 8.0
 offset_right = 342.0
 offset_bottom = 33.0
+mouse_filter = 2
 
 [node name="TitleLabel" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
 unique_name_in_owner = true
@@ -259,6 +260,8 @@ offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Okay"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=945572054]
 
 [connection signal="pressed" from="Window/Content/LowerBounds/SubmitButton" to="." method="_on_submit_button_clicked"]
 [connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]
