@@ -1,4 +1,4 @@
-class_name CatalogueApp extends Node2D
+class_name CatalogueApp extends Control
 
 const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
 const GAME_CARD_SCENE = preload("res://scenes/GameCard/game_card.tscn")

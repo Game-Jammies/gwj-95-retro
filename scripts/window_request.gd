@@ -1,4 +1,4 @@
-extends WindowBase
+extends Node
 """Handles the requests for windows"""
 
 const CATALOGUE = preload("res://resources/GameCatalogue/catalogue.tres")
@@ -22,9 +22,6 @@ func _ready() -> void:
 	populate_dropdown()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func load_file():
 	"""Loads each item as an array"""
@@ -66,11 +63,11 @@ func _on_submit_button_clicked():
 			%ResponseText.text = CORRECT_MSG
 		else:
 			%ResponseText.text = INCORRECT_MSG
-		set_title("Emails: Response from Customer")
+		%TitleLabel.text = "Emails: Response from Customer"
 		%Feedback.visible = true
 
 func _on_response_button_pressed():
 	%Feedback.visible = false
 	load_random_game()
-	set_title("Emails: Game Requested!")
+	%TitleLabel.text = "Emails: Game Requested!"
 	%LowerBounds.visible = true

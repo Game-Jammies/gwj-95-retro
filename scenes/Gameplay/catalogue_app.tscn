@@ -9,14 +9,20 @@
 [sub_resource type="Theme" id="Theme_m0153"]
 HSplitContainer/styles/split_bar_background = SubResource("StyleBoxEmpty_ionpo")
 
-[node name="CatalogueApp" type="Node2D" unique_id=130923106]
+[node name="CatalogueApp" type="Control" unique_id=1295283336]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_56jao")
+metadata/_custom_type_script = "uid://bshttvfs34bk5"
 
 [node name="Control" type="Control" parent="." unique_id=430947370]
 custom_minimum_size = Vector2(800, 800)
 custom_maximum_size = Vector2(800, 800)
 propagate_maximum_size = true
-layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

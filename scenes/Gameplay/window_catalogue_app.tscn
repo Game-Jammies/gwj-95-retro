@@ -1,71 +1,83 @@
 [gd_scene format=3 uid="uid://b7bvb48mqcy51"]
 
 [ext_resource type="Script" uid="uid://bcjvcecddx07c" path="res://scripts/window_control.gd" id="1_cbx4r"]
-[ext_resource type="Texture2D" uid="uid://bf0p6g31mxs3l" path="res://assets/art/window top edit.png" id="2_74dag"]
-[ext_resource type="Texture2D" uid="uid://bh8afucxxhg0x" path="res://assets/art/window content edit.png" id="3_8lmda"]
-[ext_resource type="Texture2D" uid="uid://x6wbyul1feie" path="res://assets/art/window_edit.png" id="4_rcng5"]
+[ext_resource type="Texture2D" uid="uid://wnwewh6sxuut" path="res://assets/art/os_window.png" id="2_uqrjw"]
+[ext_resource type="Texture2D" uid="uid://bhxsllyixosdr" path="res://assets/app_icons/icon_settings.png" id="3_uqrjw"]
 [ext_resource type="Script" uid="uid://dlrox1ajgxk51" path="res://scripts/MovableBorderControl.gd" id="5_wfyak"]
 [ext_resource type="Script" uid="uid://d3rdoi287i0qf" path="res://scripts/SizableBorderControl.gd" id="6_hvfja"]
 [ext_resource type="PackedScene" uid="uid://dptgu8ctrc2uk" path="res://scenes/Gameplay/catalogue_app.tscn" id="7_74dag"]
-[ext_resource type="Texture2D" uid="uid://d0o2f4vx26ov2" path="res://assets/art/x button.png" id="7_vmxyl"]
 
 [node name="WindowControl" type="Control" unique_id=436124811]
 layout_mode = 3
 anchors_preset = 0
 
 [node name="Window" type="Control" parent="." unique_id=156546500]
-custom_minimum_size = Vector2(845, 888)
+custom_minimum_size = Vector2(816, 856)
 anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 350.0
+offset_right = 816.0
+offset_bottom = 856.0
 script = ExtResource("1_cbx4r")
 
-[node name="TitleBarTexture" type="NinePatchRect" parent="Window" unique_id=232936371]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_74dag")
-patch_margin_left = 12
-patch_margin_top = 7
-patch_margin_right = 12
-patch_margin_bottom = 9
-
-[node name="ContentTexture" type="NinePatchRect" parent="Window" unique_id=283158314]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_8lmda")
-patch_margin_left = 25
-patch_margin_top = 15
-patch_margin_right = 25
-patch_margin_bottom = 37
-
-[node name="WholeWindow" type="NinePatchRect" parent="Window" unique_id=289451618]
-visible = false
+[node name="FullTexture" type="NinePatchRect" parent="Window" unique_id=1076817339]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_rcng5")
-patch_margin_left = 30
-patch_margin_top = 80
-patch_margin_right = 30
-patch_margin_bottom = 80
+texture = ExtResource("2_uqrjw")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 11
+patch_margin_top = 51
+patch_margin_right = 54
+patch_margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="Window/FullTexture" unique_id=954794329]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 36.0
+offset_bottom = 34.0
+texture = ExtResource("3_uqrjw")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="Window/FullTexture" unique_id=866986156]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -368.0
+offset_top = 9.0
+offset_right = 141.0
+offset_bottom = 35.0
+grow_horizontal = 2
+text = "Catalogue"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="CloseButton" type="TextureButton" parent="Window/FullTexture" unique_id=1763250408]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -43.0
+offset_top = 5.0
+offset_right = 13.666626
+offset_bottom = 61.666668
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
 
 [node name="MovableBorderControl" type="Control" parent="Window" unique_id=1878848331 node_paths=PackedStringArray("move_target")]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 40.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -49.0
+offset_bottom = 39.0
 grow_horizontal = 2
 mouse_filter = 1
 script = ExtResource("5_wfyak")
@@ -78,7 +90,7 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -5.0
+offset_left = -9.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
@@ -93,7 +105,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -5.0
+offset_top = -9.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
@@ -110,8 +122,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -10.0
+offset_left = -11.0
+offset_top = -11.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 1
@@ -128,9 +140,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = 5.0
-offset_right = -5.0
-offset_bottom = -5.0
+offset_top = 45.0
+offset_right = -11.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -140,37 +152,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 17.0
-offset_top = 47.0
-offset_right = -18.0
-offset_bottom = 7.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CatalogueApp" parent="Window/Content/LowerBounds" unique_id=130923106 instance=ExtResource("7_74dag")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="CloseButton" type="TextureButton" parent="Window/Content" unique_id=1763250408]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -36.0
-offset_right = 13.0
-offset_bottom = 48.0
-grow_horizontal = 0
-scale = Vector2(0.6, 0.6)
-texture_normal = ExtResource("7_vmxyl")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content" unique_id=592232348]
-layout_mode = 1
-offset_left = 8.0
-offset_top = 1.0
-offset_right = 247.0
-offset_bottom = 34.0
-
-[node name="Label" type="Label" parent="Window/Content/VBoxContainer" unique_id=59455975]
-layout_mode = 2
-text = "Catalogue"
-text_overrun_behavior = 3
-
-[connection signal="pressed" from="Window/Content/CloseButton" to="Window" method="_on_close_pressed"]
+[connection signal="pressed" from="Window/FullTexture/CloseButton" to="Window" method="_on_close_pressed"]
