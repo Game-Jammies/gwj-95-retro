@@ -32,12 +32,17 @@ func _populate_genre_filters() -> void:
 	var all_button = LinkButton.new()
 	all_button.text = "All"
 	all_button.pressed.connect(_on_genre_filter_pressed.bind(-1))
+	all_button.theme_type_variation = "FilterLink"
 	genre_filter_container.add_child(all_button)
 
-	for genre_id in GameData.Genre.values():
+	for genre in GameData.Genre.keys():
+		var genre_id = GameData.Genre.get(genre);
+		
 		var genre_button = LinkButton.new()
-		genre_button.text = GameData.Genre.keys()[genre_id].capitalize()
+		genre_button.text = genre.capitalize()
 		genre_button.pressed.connect(_on_genre_filter_pressed.bind(genre_id))
+		genre_button.theme_type_variation = "FilterLink"
+		
 		genre_filter_container.add_child(genre_button)
 
 

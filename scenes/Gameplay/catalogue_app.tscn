@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="2_56jao"]
 [ext_resource type="Texture2D" uid="uid://b6psbq7xfadn5" path="res://assets/art/BoxArt/Kirby.png" id="2_hccu0"]
 [ext_resource type="Texture2D" uid="uid://cn78m1p8simyb" path="res://assets/art/back button.png" id="2_qt3m0"]
+[ext_resource type="FontFile" uid="uid://0k6hbs6814om" path="res://theme/Istok_Web/IstokWeb-Bold.ttf" id="3_m23im"]
 [ext_resource type="Texture2D" uid="uid://lus7lcojr8lx" path="res://theme/os_panel_light.png" id="5_5aqof"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ionpo"]
@@ -69,10 +70,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 600)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/CatalogueContainer/GenrePanelContainer/MarginContainer/GenreFilterContainer" unique_id=252153888]
+[node name="Label" type="Label" parent="Control/CatalogueContainer/GenrePanelContainer/MarginContainer/GenreFilterContainer" unique_id=1216376937]
 layout_mode = 2
+theme = ExtResource("2_56jao")
+theme_override_fonts/font = ExtResource("3_m23im")
 text = "Genre"
-fit_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/CatalogueContainer" unique_id=2146411386]
 layout_mode = 2

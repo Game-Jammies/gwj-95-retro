@@ -83,12 +83,12 @@ func _on_submit_button_clicked():
 			%ResponseText.text = INCORRECT_MSG
 			audio_player.stream = snd_incorrect
 			audio_player.play()
-		%TitleLabel.text = "Emails: Response from Customer"
+		%TitleLabel.text = "Email: Response from Customer"
 		%Feedback.visible = true
 
 func _on_response_button_pressed():
 	%Feedback.visible = false
 	load_random_game()
-	%TitleLabel.text = "Emails: Game Requested!"
+	%TitleLabel.text = "Email: Game Requested!"
 	%LowerBounds.visible = true
 	dropdown.select(0)

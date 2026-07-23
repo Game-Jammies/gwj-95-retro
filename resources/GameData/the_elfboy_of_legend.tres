@@ -8,5 +8,5 @@ script = ExtResource("1_g03ae")
 title = "The Elfboy of Legend"
 description = "Follow the story of young Elfboy, who must rescue a princess from the evil and demonic King Ganon. The evil King has put a spell on his lair which can only be removed with the threee pieces of the Quadforce, a golden rectangle with mystical powers."
 box_art = ExtResource("1_4338j")
-genre = Array[int]([0, 2])
+genre = Array[int]([0, 4])
 metadata/_custom_type_script = "uid://bpuyl30lrwtm1"

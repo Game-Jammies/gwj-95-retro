@@ -1,8 +1,12 @@
 class_name GameData extends Resource
 
-enum MaturityRating { EVERYONE, TEEN, MATURE}
-enum Genre { ADVENTURE, PLATFORMER, RPG, SHOOTER, PUZZLE, RACING, SPORTS, HORROR, FIGHTING}
-enum Developer { GAPGOM, GEENOX, ID_PROGRAM, JAITO_CORPORATION, JAKEFILM_GAMES, JINTENDO, JONAMI, JONY_INTERACTIVE_ENTERTAINMENT, LORE_DESIGN, MDWEST_GAMES, MEGA, PANDAI_JAMCO, PEAK_SOFTWARE}
+enum MaturityRating { EVERYONE, TEEN, MATURE }
+enum Genre { ADVENTURE=0, PLATFORMER=1, SHOOTER=3, PUZZLE=4, RACING=5 }
+enum Developer { 
+	GAPGOM, GEENOX, ID_PROGRAM, JAITO_CORPORATION, JAKEFILM_GAMES, 
+	JINTENDO, JONAMI, JONY_INTERACTIVE_ENTERTAINMENT, LORE_DESIGN, 
+	MDWEST_GAMES, MEGA, PANDAI_JAMCO, PEAK_SOFTWARE 
+}
 
 
 @export var title: String = ""
@@ -19,8 +23,9 @@ func get_maturity_rating_string() -> String:
 
 func get_genre_strings() -> Array[String]:
 	var strings: Array[String] = []
-	for g in genre:
-		strings.append(Genre.keys()[g].capitalize())
+	for genre_id in genre:
+		var genre_key = GameData.Genre.find_key(genre_id)
+		strings.append(genre_key.capitalize())
 	return strings
 
 

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_m1of0")
 title = "Grand Tourism"
-description = "Race with realistic driving physics and collect up to 140 different vehicles that are a licensed copy of the real thing! Race, upgrade, and show off your new ride as you unlock new tracks around the world."
+description = "Race with realistic driving physics and collect up to 140 different real-life copies of licensed vehicles! Race, upgrade, and show off your new ride as you unlock new tracks around the world."
 box_art = ExtResource("1_48l55")
 genre = Array[int]([5])
 developer = 7
