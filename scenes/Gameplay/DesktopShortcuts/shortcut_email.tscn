@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dovx768w1l608"]
 
 [ext_resource type="Script" uid="uid://dboqitdbrln3n" path="res://scripts/shortcut.gd" id="1_7dv23"]
+[ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="1_vq1ds"]
 [ext_resource type="PackedScene" uid="uid://rws5i22ssbqh" path="res://scenes/Gameplay/window_request.tscn" id="2_wj05l"]
 [ext_resource type="Texture2D" uid="uid://bpa5kh68oe7iv" path="res://assets/app_icons/icon_email.png" id="3_8fjf6"]
 
 [node name="EmailShortcut" type="VBoxContainer" unique_id=177136333]
 offset_right = 100.0
 offset_bottom = 127.0
+theme = ExtResource("1_vq1ds")
 script = ExtResource("1_7dv23")
 window_load = ExtResource("2_wj05l")
 spawn_pos = Vector2(50, 100)

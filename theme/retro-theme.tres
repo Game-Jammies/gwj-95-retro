@@ -3,6 +3,8 @@
 [ext_resource type="StyleBox" uid="uid://cw6hqew72cbqf" path="res://theme/style_box_panel_gray.tres" id="1_k4crv"]
 [ext_resource type="Texture2D" uid="uid://bstmqys3v4j3x" path="res://theme/os_panel_dark.png" id="1_wxok6"]
 [ext_resource type="StyleBox" uid="uid://clixh61rt63ab" path="res://theme/style_box_panel_light.tres" id="2_vatr3"]
+[ext_resource type="FontFile" uid="uid://0k6hbs6814om" path="res://theme/Istok_Web/IstokWeb-Bold.ttf" id="4_kln4t"]
+[ext_resource type="FontFile" uid="uid://c44dydt0d0g1d" path="res://theme/Istok_Web/IstokWeb-Regular.ttf" id="4_wt7n2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m23im"]
 texture = ExtResource("1_wxok6")
@@ -12,6 +14,8 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 
 [resource]
+default_font = ExtResource("4_wt7n2")
+default_font_size = 16
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 0.8901961)
 Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -23,3 +27,5 @@ Button/styles/pressed = ExtResource("2_vatr3")
 OptionButton/styles/hover = ExtResource("1_k4crv")
 OptionButton/styles/normal = ExtResource("1_k4crv")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_m23im")
+WindowTitle/base_type = &"Label"
+WindowTitle/fonts/font = ExtResource("4_kln4t")
