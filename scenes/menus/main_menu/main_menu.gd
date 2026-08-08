@@ -23,7 +23,6 @@ signal game_exited
 
 var sub_menu : Control
 
-@onready var menu_container = %MenuContainer
 @onready var new_game_button = %NewGameButton
 @onready var options_button = %OptionsButton
 @onready var credits_button = %CreditsButton
@@ -62,7 +61,7 @@ func exit_game() -> void:
 func _open_sub_menu(menu : PackedScene) -> Node:
 	sub_menu = menu.instantiate()
 	add_child(sub_menu)
-	menu_container.hide()
+	#menu_container.hide()
 	sub_menu.hidden.connect(_close_sub_menu, CONNECT_ONE_SHOT)
 	sub_menu.tree_exiting.connect(_close_sub_menu, CONNECT_ONE_SHOT)
 	sub_menu_opened.emit()
@@ -73,7 +72,7 @@ func _close_sub_menu() -> void:
 		return
 	sub_menu.queue_free()
 	sub_menu = null
-	menu_container.show()
+	#menu_container.show()
 	sub_menu_closed.emit()
 
 func _event_is_mouse_button_released(event : InputEvent) -> bool:
