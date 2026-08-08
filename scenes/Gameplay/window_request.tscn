@@ -159,6 +159,7 @@ theme = ExtResource("7_htlyc")
 
 [node name="LowerBounds" type="Control" parent="Window/Content" unique_id=331838409]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(382, 0)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15

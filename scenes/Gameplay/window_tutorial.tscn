@@ -181,9 +181,11 @@ modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_vertical = 1
-text = "Heya, Welcome to the Retrobuster crew!
+text = "Heya, welcome to the RETROBUSTER crew!
+
 This is our computer system that holds all of our games. Your job is to respond to emails from our customers and find what game they want.
-Click on Retromail to get started."
+
+Open the RetroMail app to get started."
 autowrap_mode = 3
 
 [node name="ResponseButton" type="Button" parent="Window/Content/Feedback" unique_id=274188328]
@@ -199,7 +201,7 @@ offset_right = 42.0
 offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Okay"
+text = "OK"
 
 [connection signal="pressed" from="Window/FullTexture/CloseButton" to="Window" method="_on_close_pressed"]
 [connection signal="pressed" from="Window/Content/Feedback/ResponseButton" to="Window" method="_on_close_pressed"]
