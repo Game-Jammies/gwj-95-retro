@@ -4,8 +4,7 @@ extends Control
 
 signal sub_menu_opened
 signal sub_menu_closed
-signal game_started
-signal game_exited
+signal game_startedgnal game_exited
 
 ## Defines the path to the game scene. Hides the play button if empty.
 ## Will attempt to read from AppConfig if left empty.
@@ -24,7 +23,6 @@ signal game_exited
 var sub_menu : Control
 
 @onready var menu_container = %MenuContainer
-@onready var menu_buttons_box_container = %MenuButtonsBoxContainer
 @onready var new_game_button = %NewGameButton
 @onready var options_button = %OptionsButton
 @onready var credits_button = %CreditsButton

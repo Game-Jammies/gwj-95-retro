@@ -1,43 +1,58 @@
 [gd_scene format=3 uid="uid://conoq2gmylqvr"]
 
-[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_ub2bi"]
 [ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="2_0jpat"]
 [ext_resource type="Script" uid="uid://u3hoafvcejmm" path="res://scenes/menus/main_menu/main_menu.gd" id="2_x31ro"]
-[ext_resource type="PackedScene" uid="uid://ytsxm0ga3cgx" path="res://scenes/menus/options_menu/custom_options_menu.tscn" id="4_7j6ce"]
+[ext_resource type="PackedScene" uid="uid://mhk7ai1jtttm" path="res://scenes/windows/main_menu_options_window.tscn" id="3_qwqm5"]
 [ext_resource type="PackedScene" uid="uid://dnaejbfe1nvn1" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_m0ubd"]
 [ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_overlaid_window.tscn" id="5_627ab"]
+[ext_resource type="Script" uid="uid://b5oej1q4h7jvh" path="res://addons/maaacks_game_template/base/nodes/autoloads/ui_sound_controller/ui_sound_controller.gd" id="5_qwqm5"]
 [ext_resource type="Texture2D" uid="uid://ykvk5qymos7c" path="res://assets/art/title screen.png" id="6_0jpat"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/nodes/music_players/background_music_player.tscn" id="6_q0yg5"]
 [ext_resource type="Texture2D" uid="uid://cqdnetvino2yw" path="res://assets/art/TitleScreen/offexit button.png" id="7_7j6ce"]
 [ext_resource type="Texture2D" uid="uid://c8n00xjf7v88n" path="res://assets/art/TitleScreen/settings button.png" id="8_qwqm5"]
 [ext_resource type="Texture2D" uid="uid://bi42drtp0tatw" path="res://assets/art/TitleScreen/start button.png" id="9_q0yg5"]
 
-[node name="MainMenu" unique_id=1058120615 instance=ExtResource("1_ub2bi")]
+[node name="MainMenu" type="Control" unique_id=1058120615]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("2_0jpat")
 script = ExtResource("2_x31ro")
-level_select_packed_scene = null
-confirm_new_game = true
-options_packed_scene = ExtResource("4_7j6ce")
+options_packed_scene = ExtResource("3_qwqm5")
 credits_packed_scene = ExtResource("4_m0ubd")
 
-[node name="BackgroundTextureRect" parent="." index="2" unique_id=1940176448]
+[node name="UISoundController" type="Node" parent="." unique_id=1619985599]
+script = ExtResource("5_qwqm5")
+
+[node name="BackgroundMusicPlayer" parent="." unique_id=1141822549 instance=ExtResource("6_q0yg5")]
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=1496604198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("6_0jpat")
 
-[node name="TitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(396616752) index="0" unique_id=2112060331]
-visible = false
-
-[node name="ContinueGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" parent_id_path=PackedInt32Array(2017477786) index="0" unique_id=2077321160]
+[node name="MenuContainer" type="MarginContainer" parent="." unique_id=396616752]
 unique_name_in_owner = true
-visible = false
-layout_mode = 2
-text = "Continue"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" parent_id_path=PackedInt32Array(2017477786) index="1" unique_id=1742178973]
+[node name="MenuButtonsContainer" type="Control" parent="MenuContainer" unique_id=116448484]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ExitButton" type="TextureButton" parent="MenuContainer/MenuButtonsContainer" unique_id=1090235228]
 unique_name_in_owner = true
-visible = false
-layout_mode = 2
-text = "Level Select"
-
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="1" unique_id=1090235228]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -50,7 +65,8 @@ grow_vertical = 0
 tooltip_text = "Exit Game"
 texture_normal = ExtResource("7_7j6ce")
 
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="2" unique_id=301223169]
+[node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsContainer" unique_id=301223169]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -63,8 +79,10 @@ offset_right = -40.0
 offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
+text = "Credits"
 
-[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="3" unique_id=468526331]
+[node name="OptionsButton" type="TextureButton" parent="MenuContainer/MenuButtonsContainer" unique_id=468526331]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -77,7 +95,8 @@ grow_vertical = 0
 tooltip_text = "Options"
 texture_normal = ExtResource("8_qwqm5")
 
-[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(116448484) index="4" unique_id=1937938999]
+[node name="NewGameButton" type="TextureButton" parent="MenuContainer/MenuButtonsContainer" unique_id=1937938999]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -93,7 +112,20 @@ grow_vertical = 2
 tooltip_text = "Start Game"
 texture_normal = ExtResource("9_q0yg5")
 
-[node name="NewGameConfirmation" parent="." index="5" unique_id=613417993 instance=ExtResource("5_627ab")]
+[node name="ExitConfirmation" parent="." unique_id=912502155 instance=ExtResource("5_627ab")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(300, 160)
+layout_mode = 1
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = 80.0
+ui_cancel_closes = false
+title = "Exit Game?"
+text = "Really exit the game?"
+
+[node name="NewGameConfirmation" parent="." unique_id=613417993 instance=ExtResource("5_627ab")]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(420, 200)
@@ -107,6 +139,9 @@ text = "Are you sure you want to start a new game?
 
 All progress in the current game will be lost."
 
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="confirmed" from="ExitConfirmation" to="." method="_on_exit_confirmation_confirmed"]
 [connection signal="confirmed" from="NewGameConfirmation" to="." method="_on_new_game_confirmation_confirmed"]
