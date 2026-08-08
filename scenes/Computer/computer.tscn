@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bdcpj65y68ok7"]
 
-[ext_resource type="Texture2D" uid="uid://bfat87osjjexk" path="res://assets/art/Desktop Blank.png" id="1_4xq8f"]
 [ext_resource type="PackedScene" uid="uid://dovx768w1l608" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_email.tscn" id="1_hkthn"]
 [ext_resource type="Script" uid="uid://xd6vwmihefjp" path="res://scenes/Computer/computer.gd" id="1_lea2j"]
 [ext_resource type="PackedScene" uid="uid://dt6xj8uedkkwx" path="res://scenes/Gameplay/window_tutorial.tscn" id="2_8a8ig"]
+[ext_resource type="Texture2D" uid="uid://elf72kdig8oj" path="res://assets/art/desktop-blank.png" id="3_5wtx6"]
+[ext_resource type="Texture2D" uid="uid://dsnwtfaasjgdo" path="res://assets/art/desktop-bg-icon.png" id="4_1rwj2"]
 [ext_resource type="PackedScene" uid="uid://vcggyfbaghmv" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_catalogue.tscn" id="4_qujak"]
 [ext_resource type="PackedScene" uid="uid://c7cjqnjico36q" path="res://scenes/Gameplay/DesktopShortcuts/shortcut_options.tscn" id="4_vyhg6"]
 [ext_resource type="PackedScene" uid="uid://c1hjspwnp3sxb" path="res://scenes/Computer/taskbar.tscn" id="5_2rem3"]
@@ -23,14 +24,34 @@ script = ExtResource("1_lea2j")
 window_load = ExtResource("2_8a8ig")
 spawn_pos = Vector2(600, 400)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1046354256]
+[node name="DesktopTexture" type="NinePatchRect" parent="." unique_id=1083493549]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4xq8f")
+texture = ExtResource("3_5wtx6")
+patch_margin_right = 287
+patch_margin_bottom = 73
+
+[node name="LogoTexture" type="TextureRect" parent="DesktopTexture" unique_id=129678148]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31800002
+anchor_top = 0.277
+anchor_right = 0.683
+anchor_bottom = 0.707
+offset_left = -0.5600586
+offset_top = -0.16000366
+offset_right = -0.36010742
+offset_bottom = 0.44000244
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_1rwj2")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="ScreenMarginContainer" type="MarginContainer" parent="." unique_id=852935357]
 layout_mode = 1
@@ -43,11 +64,13 @@ theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
+metadata/_edit_lock_ = true
 
 [node name="HFlowContainer" type="HFlowContainer" parent="ScreenMarginContainer" unique_id=473577498]
 layout_mode = 2
 theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 40
+metadata/_edit_lock_ = true
 
 [node name="EmailApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=1342616751 instance=ExtResource("1_hkthn")]
 custom_minimum_size = Vector2(100, 100)

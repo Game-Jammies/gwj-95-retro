@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfat87osjjexk"
-path="res://.godot/imported/Desktop Blank.png-5a5ff836d23f49c1b6ad7a63da7a9277.ctex"
+uid="uid://dsnwtfaasjgdo"
+path="res://.godot/imported/desktop-bg-icon.png-a3b8e34267abd5ae8b0556c382509bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Desktop Blank.png"
-dest_files=["res://.godot/imported/Desktop Blank.png-5a5ff836d23f49c1b6ad7a63da7a9277.ctex"]
+source_file="res://assets/art/desktop-bg-icon.png"
+dest_files=["res://.godot/imported/desktop-bg-icon.png-a3b8e34267abd5ae8b0556c382509bc0.ctex"]
 
 [params]
 
