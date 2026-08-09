@@ -12,7 +12,7 @@ texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 
 [node name="GameCard" type="Control" unique_id=1830034026]
-custom_minimum_size = Vector2(150, 200)
+custom_minimum_size = Vector2(150, 270)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,8 @@ mouse_default_cursor_shape = 2
 script = ExtResource("1_ismmn")
 
 [node name="Panel" type="Panel" parent="." unique_id=1050627598]
-custom_minimum_size = Vector2(150, 200)
+custom_minimum_size = Vector2(150, 270)
+custom_maximum_size = Vector2(150, 270)
 layout_mode = 0
 offset_right = 145.0
 offset_bottom = 200.0
@@ -33,10 +34,12 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_vatr3")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1758075526]
-custom_maximum_size = Vector2(150, 200)
-layout_mode = 0
-offset_right = 159.0
-offset_bottom = 231.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
@@ -53,6 +56,7 @@ clip_contents = true
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
+ratio = 0.6667
 alignment_vertical = 0
 
 [node name="BoxArt" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/AspectRatioContainer" unique_id=175407382]
@@ -64,10 +68,13 @@ expand_mode = 1
 
 [node name="TitleLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=447573506]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(135, 60)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 mouse_filter = 2
-text = "Game Title "
+text = "line 1
+line 2"
+fit_content = true
 scroll_active = false
 autowrap_mode = 2
+shortcut_keys_enabled = false
 horizontal_alignment = 1
