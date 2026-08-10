@@ -83,6 +83,7 @@ offset_right = -49.0
 offset_bottom = 39.0
 grow_horizontal = 2
 mouse_filter = 1
+mouse_default_cursor_shape = 6
 script = ExtResource("4_d3t8x")
 move_target = NodePath("..")
 metadata/_custom_type_script = "uid://dlrox1ajgxk51"

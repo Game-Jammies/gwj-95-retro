@@ -88,6 +88,7 @@ offset_right = -49.0
 offset_bottom = 39.0
 grow_horizontal = 2
 mouse_filter = 1
+mouse_default_cursor_shape = 6
 script = ExtResource("7_jnhwl")
 move_target = NodePath("..")
 metadata/_custom_type_script = "uid://dlrox1ajgxk51"
@@ -175,102 +176,66 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 3
 mouse_filter = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 18
 
-[node name="ContentText" type="Label" parent="Window/Content/LowerBounds/MarginContainer" unique_id=1084320785]
+[node name="Request" type="VBoxContainer" parent="Window/Content/LowerBounds/MarginContainer" unique_id=393785315]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ContentText" type="Label" parent="Window/Content/LowerBounds/MarginContainer/Request" unique_id=1084320785]
 unique_name_in_owner = true
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
-size_flags_vertical = 1
+size_flags_vertical = 3
 text = "Sample Text Sample Text Sample Text Bluju"
 autowrap_mode = 3
 
-[node name="SubmitButton" type="Button" parent="Window/Content/LowerBounds" unique_id=1845400338]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 81.0
-offset_top = -71.0
-offset_right = 165.0
-offset_bottom = -26.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Submit"
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/Content/LowerBounds/MarginContainer/Request" unique_id=1965961518]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 12
+alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="Window/Content/LowerBounds" unique_id=845408862]
+[node name="OptionButton" type="OptionButton" parent="Window/Content/LowerBounds/MarginContainer/Request/HBoxContainer" unique_id=845408862]
 unique_name_in_owner = true
 custom_maximum_size = Vector2(235, -1)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -167.0
-offset_top = -71.0
-offset_right = 68.0
-offset_bottom = -26.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 
-[node name="Feedback" type="Control" parent="Window/Content" unique_id=387972931]
+[node name="SubmitButton" type="Button" parent="Window/Content/LowerBounds/MarginContainer/Request/HBoxContainer" unique_id=1845400338]
+layout_mode = 2
+text = "Submit"
+
+[node name="Feedback" type="VBoxContainer" parent="Window/Content/LowerBounds/MarginContainer" unique_id=1024016401]
 unique_name_in_owner = true
 visible = false
 clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="MarginContainer" type="MarginContainer" parent="Window/Content/Feedback" unique_id=606019876]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 4
-
-[node name="ResponseText" type="Label" parent="Window/Content/Feedback/MarginContainer" unique_id=2037694978]
+[node name="ResponseText" type="Label" parent="Window/Content/LowerBounds/MarginContainer/Feedback" unique_id=2037694978]
 unique_name_in_owner = true
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
-size_flags_vertical = 1
+size_flags_vertical = 3
 text = "Sample Text Sample Text Sample Text Bluju"
 autowrap_mode = 3
 
-[node name="ResponseButton" type="Button" parent="Window/Content/Feedback" unique_id=78349262]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = -64.0
-offset_right = 42.0
-offset_bottom = -19.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Okay"
+[node name="ResponseButton" type="Button" parent="Window/Content/LowerBounds/MarginContainer/Feedback" unique_id=78349262]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OK"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1273676292]
 
 [connection signal="pressed" from="Window/FullTexture/CloseButton" to="Window" method="_on_close_pressed"]
-[connection signal="pressed" from="Window/Content/LowerBounds/SubmitButton" to="." method="_on_submit_button_clicked"]
-[connection signal="pressed" from="Window/Content/Feedback/ResponseButton" to="." method="_on_response_button_pressed"]
+[connection signal="pressed" from="Window/Content/LowerBounds/MarginContainer/Request/HBoxContainer/SubmitButton" to="." method="_on_submit_button_clicked"]
+[connection signal="pressed" from="Window/Content/LowerBounds/MarginContainer/Feedback/ResponseButton" to="." method="_on_response_button_pressed"]

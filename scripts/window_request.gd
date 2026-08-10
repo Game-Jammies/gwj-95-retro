@@ -72,7 +72,7 @@ func _on_submit_button_clicked():
 	#TODO: emit a signal from the dropdown.get_selected_id()
 	print(target_game_title)
 	if dropdown.get_selected_id() > 0:
-		%LowerBounds.visible = false
+		%Request.visible = false
 		var selected_game = dropdown.get_item_text(dropdown.selected)
 		print(selected_game)
 		if selected_game.to_upper() == target_game_title.to_upper():
@@ -90,5 +90,5 @@ func _on_response_button_pressed():
 	%Feedback.visible = false
 	load_random_game()
 	%TitleLabel.text = "Email: Game Requested!"
-	%LowerBounds.visible = true
+	%Request.visible = true
 	dropdown.select(0)
