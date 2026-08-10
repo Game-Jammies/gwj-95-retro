@@ -35,23 +35,23 @@ texture = ExtResource("3_5wtx6")
 patch_margin_right = 287
 patch_margin_bottom = 73
 
-[node name="LogoTexture" type="TextureRect" parent="DesktopTexture" unique_id=129678148]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="DesktopTexture" unique_id=361208420]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.31800002
-anchor_top = 0.277
-anchor_right = 0.683
-anchor_bottom = 0.707
-offset_left = -0.5600586
-offset_top = -0.16000366
-offset_right = -0.36010742
-offset_bottom = 0.44000244
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+ratio = 1.5
+
+[node name="LogoTexture" type="TextureRect" parent="DesktopTexture/AspectRatioContainer" unique_id=129678148]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.4, 0.4)
+mouse_filter = 2
 texture = ExtResource("4_1rwj2")
-expand_mode = 3
-stretch_mode = 5
 
 [node name="ScreenMarginContainer" type="MarginContainer" parent="." unique_id=852935357]
 layout_mode = 1
