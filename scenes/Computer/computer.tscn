@@ -72,15 +72,17 @@ theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 40
 metadata/_edit_lock_ = true
 
-[node name="EmailApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=1342616751 instance=ExtResource("1_hkthn")]
+[node name="EmailShortcut" parent="ScreenMarginContainer/HFlowContainer" unique_id=1342616751 instance=ExtResource("1_hkthn")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 
 [node name="CatalogueShortcut" parent="ScreenMarginContainer/HFlowContainer" unique_id=177136333 instance=ExtResource("4_qujak")]
 layout_mode = 2
+spawn_pos = Vector2(140, 30)
 
-[node name="SettingsApp" parent="ScreenMarginContainer/HFlowContainer" unique_id=357621122 instance=ExtResource("4_vyhg6")]
+[node name="SettingsShortcut" parent="ScreenMarginContainer/HFlowContainer" unique_id=357621122 instance=ExtResource("4_vyhg6")]
 layout_mode = 2
+spawn_pos = Vector2(10, 30)
 
 [node name="Taskbar" parent="." unique_id=1460470293 instance=ExtResource("5_2rem3")]
 layout_mode = 1

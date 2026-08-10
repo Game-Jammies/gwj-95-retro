@@ -14,10 +14,10 @@ anchors_preset = 0
 theme = ExtResource("1_74dag")
 
 [node name="Window" type="Control" parent="." unique_id=156546500]
-custom_minimum_size = Vector2(816, 856)
+custom_minimum_size = Vector2(660, 770)
 anchors_preset = 0
-offset_right = 816.0
-offset_bottom = 856.0
+offset_right = 980.0
+offset_bottom = 770.0
 script = ExtResource("1_cbx4r")
 
 [node name="FullTexture" type="NinePatchRect" parent="Window" unique_id=1076817339]
