@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_ypukv")
 title = "Alien Shooter"
-description = "A very popular and infuential game in the the industry. The goal is to defeat wave after wave of descending aliens, making sure to destroy them before they reach the bottom. All you have is a horizontally-controlled laser cannon to kill all the aliens and earn as many points as possible."
+description = "A very popular and influential game in the the industry. The goal is to defeat wave after wave of descending aliens, making sure to destroy them before they reach the bottom. All you have is a horizontally-controlled laser cannon to kill all the aliens and earn as many points as possible."
 box_art = ExtResource("1_qclkv")
 genre = Array[int]([3])
 developer = 3
