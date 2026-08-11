@@ -13,7 +13,7 @@ script = ExtResource("1_i1w7n")
 [node name="PauseMenu" parent="." unique_id=1220268013 instance=ExtResource("2_1r40g")]
 unique_name_in_owner = true
 process_mode = 3
-custom_minimum_size = Vector2(256, 312)
+custom_minimum_size = Vector2(256, 200)
 script = ExtResource("3_okuwl")
 options_menu_scene = ExtResource("4_mh1be")
 main_menu_scene_path = ""
@@ -56,6 +56,7 @@ text = "Load Game"
 
 [node name="OptionsButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1220268013, 1371114575) index="4" unique_id=2034260124]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Options"
 
