@@ -8,12 +8,15 @@
 [ext_resource type="Theme" uid="uid://cvky8yq5xlw6f" path="res://theme/retro-theme.tres" id="7_uiiyj"]
 
 [node name="WindowRequest" type="Control" unique_id=436124811]
+custom_minimum_size = Vector2(400, 350)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 350.0
 theme = ExtResource("7_uiiyj")
 
 [node name="Window" type="Control" parent="." unique_id=1819028383]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(363, 350)
 anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 350.0

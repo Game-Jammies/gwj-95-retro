@@ -21,8 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lea2j")
-window_load = ExtResource("2_8a8ig")
-spawn_pos = Vector2(600, 400)
+tutorial_scene = ExtResource("2_8a8ig")
 
 [node name="DesktopTexture" type="NinePatchRect" parent="." unique_id=1083493549]
 layout_mode = 1

@@ -17,7 +17,7 @@ script = ExtResource("1_rv0vr")
 file_path = "res://text/gamerequests.txt"
 
 [node name="Window" type="Control" parent="." unique_id=156546500]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(350, 350)
 anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 350.0
@@ -37,7 +37,7 @@ patch_margin_top = 51
 patch_margin_right = 54
 patch_margin_bottom = 16
 
-[node name="TextureRect" type="TextureRect" parent="Window/FullTexture" unique_id=1789849668]
+[node name="IconTexture" type="TextureRect" parent="Window/FullTexture" unique_id=1789849668]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 10.0
@@ -160,7 +160,6 @@ theme = ExtResource("7_htlyc")
 
 [node name="LowerBounds" type="Control" parent="Window/Content" unique_id=331838409]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(382, 0)
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15
